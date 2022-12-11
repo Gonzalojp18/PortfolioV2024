@@ -1,0 +1,33 @@
+.navBar {
+  background-color: rgb(31, 33, 34);
+  justify-content: space-between;
+  align-items: center;
+}
+.navBar .socialMedia {
+  display: flex;
+}
+.navBar .socialMedia ul {
+  width: 30%;
+}
+.navBar .socialMedia ul li {
+  margin: 0.8rem;
+  list-style: none;
+}
+.navBar .socialMedia .link {
+  margin: 1rem;
+}
+.navBar .socialMedia .link a {
+  padding: 1rem;
+  text-decoration: none;
+  color: #f3f3f3;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .navBar {
+    background-color: red;
+  }
+  .navBar .socialMedia {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=style.scss.map */

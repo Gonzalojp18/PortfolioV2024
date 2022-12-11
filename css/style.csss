@@ -1,0 +1,1005 @@
+#mode {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  font-size: 0.7em;
+  background-color: #1d242e;
+  border-radius: 10px;
+  padding: 0.3em;
+  color: #f3f3f3;
+}
+#mode:hover {
+  background-color: #6d6f72;
+}
+
+.navBar {
+  justify-content: center;
+}
+.navBar ul {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1rem;
+  width: 100%;
+}
+.navBar ul li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+.navBar ul li a {
+  text-decoration: none;
+  color: #f3f3f3;
+  text-align: center;
+  border-bottom: 0.3em solid #283240;
+  font-weight: 400;
+  font-size: 0.8rem;
+  padding: 0.2em;
+}
+.navBar ul li a:hover {
+  border-bottom: none;
+  box-shadow: rgb(126, 161, 201) 0px 0px 0px 2px, rgb(76, 118, 167) 0px 2px 3px -1px, rgb(70, 104, 157) 0px 1px 4px inset;
+  transition: 0.2s all ease-in-out;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .navBar {
+    flex-direction: column-reverse;
+  }
+  .navBar .link {
+    position: fixed;
+    top: 0.5rem;
+    flex-direction: column;
+    margin: 0.1rem;
+  }
+  .navBar .link a {
+    padding: 0.8rem 0.5rem 1rem 0;
+    font-size: 0.6rem;
+    margin-right: 0;
+  }
+  .navBar .link a:hover {
+    border: none;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .navBar {
+    flex-direction: column-reverse;
+    width: 24vw;
+  }
+  .navBar .link {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0.5rem;
+  }
+  .navBar .link a {
+    padding-top: 2rem;
+    text-decoration: none;
+    font-size: 0.6rem;
+  }
+}
+html * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto Flex", sans-serif;
+  background-color: #292c2f;
+  opacity: 0.9;
+}
+
+.light {
+  background-color: #f3f3f3;
+}
+
+header {
+  background-color: #292c2f;
+  height: 100vh;
+}
+header .socialMedia {
+  position: absolute;
+  left: 95%;
+  top: 40%;
+}
+header .socialMedia .lnkdn:hover {
+  transition: 0.2s all ease-in-out;
+  box-shadow: rgb(15, 102, 201) 0px 0px 0px 5px, rgb(15, 72, 138) 0px 4px 6px -1px, rgb(14, 72, 157) 0px 1px 5px inset;
+}
+header .socialMedia .git:hover {
+  transition: 0.2s all ease-in-out;
+  box-shadow: rgb(77, 77, 79) 0px 0px 0px 5px, rgb(93, 92, 92) 0px 4px 6px -1px, rgb(125, 123, 123) 0px 1px 5px inset;
+}
+header .socialMedia .tw:hover {
+  transition: 0.2s all ease-in-out;
+  box-shadow: rgb(26, 163, 216) 0px 0px 0px 5px, rgb(30, 190, 221) 0px 4px 6px -1px, rgb(16, 148, 199) 0px 1px 5px inset;
+}
+header .socialMedia .med:hover {
+  transition: 0.2s all ease-in-out;
+  box-shadow: rgb(221, 222, 223) 0px 0px 0px 5px, rgb(231, 232, 233) 0px 4px 6px -1px, rgb(236, 237, 237) 0px 1px 5px inset;
+}
+header .socialMedia ul {
+  width: 30%;
+}
+header .socialMedia li {
+  list-style: none;
+  margin: 0.8rem;
+}
+header .boxName {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+header .boxName .name {
+  text-align: right;
+  width: 70%;
+  margin: 0 10rem 0 auto;
+}
+header .boxName .name p {
+  font-size: 1.5rem;
+  color: #f3f3f3;
+}
+header .boxName .name .hi {
+  line-height: 2;
+  color: #f3f3f3;
+  font-size: 4rem;
+  border: 1.5px solid #00caf4;
+}
+header .boxName .name .hi:hover {
+  box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 10px;
+  transition: 0.4s all ease-in-out;
+  background-color: rgb(3, 102, 214);
+}
+header .boxName .name .lname {
+  line-height: 2;
+  color: #f3f3f3;
+  font-size: 4rem;
+  border: 1.5px solid #f90041;
+}
+header .boxName .name .lname:hover {
+  box-shadow: rgba(209, 5, 15, 0.3) 0px 0px 0px 10px;
+  transition: 0.4s all ease-in-out;
+  background-color: rgb(199, 18, 18);
+}
+header .boxName .name h1 {
+  color: #f3f3f3;
+  font-size: 3rem;
+}
+header .boxName .name h2 {
+  color: #f3f3f3;
+  font-size: 3rem;
+}
+header .quote {
+  width: 30%;
+  margin-left: 45%;
+}
+header .quote p {
+  font-size: 0.8rem;
+  color: #f3f3f3;
+  text-align: right;
+}
+header .down {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  width: 100%;
+  margin-top: 6rem;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  header {
+    width: 100%;
+    background-color: #1a1c1e;
+  }
+  header .socialMedia {
+    position: absolute;
+    left: 1%;
+    top: 60%;
+  }
+  header .socialMedia ul li {
+    list-style: none;
+    margin: 0.8rem;
+  }
+  header .boxName {
+    width: 80%;
+    margin: 1rem 0 0 1rem;
+  }
+  header .boxName .name {
+    width: 100%;
+  }
+  header .boxName .name p {
+    font-size: 0.9rem;
+    color: #f3f3f3;
+  }
+  header .boxName .name h1 {
+    color: #f3f3f3;
+    font-size: 2.5rem;
+  }
+  header .boxName .name h2 {
+    color: #f3f3f3;
+    font-size: 2.5rem;
+  }
+  header .boxName .name .hi {
+    line-height: 2;
+    font-size: 2.5rem;
+    border: 1px solid #00caf4;
+  }
+  header .boxName .name .hi:hover {
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 5px;
+    transition: 0.3s all ease-in-out;
+  }
+  header .boxName .name .lname {
+    line-height: 2;
+    color: #f3f3f3;
+    font-size: 2.5rem;
+    border: 1.5px solid #f90041;
+  }
+  header .boxName .name .lname:hover {
+    box-shadow: rgba(163, 9, 17, 0.3) 0px 0px 0px 5px;
+    transition: 0.3s all ease-in-out;
+  }
+  header .boxName .quote {
+    width: 90%;
+    margin-left: 20%;
+  }
+  header .boxName .quote p {
+    font-size: 0.6rem;
+  }
+  header .boxName .down {
+    display: none;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  header {
+    background-color: #1a1c1e;
+  }
+  header .socialMedia {
+    position: absolute;
+    left: 5%;
+    top: 70%;
+  }
+  header .socialMedia ul {
+    width: 10%;
+  }
+  header .socialMedia li {
+    list-style: none;
+    margin: 0.8rem;
+  }
+  header .boxName {
+    height: 100%;
+    width: 80%;
+    margin: 1rem 0 0 2rem;
+  }
+  header .boxName .name {
+    width: 100%;
+    text-align: right;
+    font-size: 2rem;
+  }
+  header .boxName .name p {
+    font-size: 1rem;
+    color: #f3f3f3;
+  }
+  header .boxName .name h1 {
+    color: #f3f3f3;
+    font-size: 2.5rem;
+  }
+  header .boxName .name h2 {
+    color: #f3f3f3;
+    font-size: 2.5rem;
+  }
+  header .boxName .name .hi {
+    line-height: 2;
+    color: #f3f3f3;
+    font-size: 3rem;
+    border: 1.5px solid #00caf4;
+  }
+  header .boxName .name .hi:hover {
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 5px;
+    transition: 0.3s all ease-in-out;
+  }
+  header .boxName .name .lname {
+    line-height: 2;
+    color: #f3f3f3;
+    font-size: 3rem;
+    border: 1.5px solid #f90041;
+  }
+  header .boxName .name .lname:hover {
+    box-shadow: rgba(163, 9, 17, 0.3) 0px 0px 0px 5px;
+    transition: 0.3s all ease-in-out;
+  }
+  header .boxName .quote {
+    margin: 2rem 0 3rem 2rem;
+    width: 80%;
+    margin-left: 20%;
+  }
+  header .boxName .quote p {
+    font-size: 0.6rem;
+    width: 100%;
+  }
+  header .boxName .down {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  header .socialMedia {
+    position: absolute;
+    left: 5%;
+    top: 50%;
+  }
+  header .boxName {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  header .boxName .name {
+    width: 70%;
+    margin: 0 0 0 auto;
+    padding: 2rem;
+  }
+  header .boxName .name h1 {
+    font-size: 3rem;
+    font-weight: 400;
+  }
+  header .boxName .name p {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+  header .boxName .name h2 {
+    color: #f3f3f3;
+    font-size: 2.5rem;
+  }
+  header .boxName .name .hi {
+    line-height: 2;
+    font-size: 3rem;
+  }
+  header .boxName .name .hi:hover {
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 5px;
+    transition: 0.3s all ease-in-out;
+  }
+  header .boxName .name .lname {
+    line-height: 2;
+    color: #f3f3f3;
+    font-size: 3rem;
+    border: 1.5px solid #f90041;
+  }
+  header .quote {
+    margin: 2rem 0 2rem 3rem;
+    width: 50%;
+    margin-left: 40%;
+  }
+  header .quote p {
+    font-size: 0.7rem;
+  }
+  header .down {
+    margin-top: 1rem;
+  }
+}
+
+.boxServices {
+  background-color: #292c2f;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  height: 50%;
+}
+.boxServices .boxCard {
+  margin: 2rem 2rem 2rem 2rem;
+  width: 20%;
+  height: 60%;
+  text-align: center;
+  color: #f3f3f3;
+}
+.boxServices .boxCard h6 {
+  margin: 0.7rem 0 0.7rem 0;
+  font-size: 1.5rem;
+}
+.boxServices .boxCard p {
+  line-height: 2;
+  text-align: center;
+  font-size: 0.8rem;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .boxServices {
+    display: none;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .boxServices {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .boxServices {
+    flex-wrap: nowrap;
+    height: 60%;
+  }
+  .boxServices .boxCard {
+    width: 100%;
+    height: 30vh;
+    font-size: 0.6rem;
+    margin: 0.5rem;
+    padding: 1rem;
+  }
+  .boxServices .boxCard h6 {
+    margin: 0.5rem 0 0.5rem 0;
+    font-size: 1rem;
+  }
+}
+
+.boxAboutMe {
+  display: flex;
+  background-color: #1e2225;
+}
+.boxAboutMe .aboutMe {
+  width: 40%;
+  color: #f3f3f3;
+  padding: 2rem 0 0 4rem;
+  text-align: justify;
+}
+.boxAboutMe .aboutMe h2 {
+  font-size: 3rem;
+  color: #00caf4;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+.boxAboutMe .aboutMe p {
+  padding-bottom: 1rem;
+  font-size: 0.9em;
+}
+.boxAboutMe .aboutMe .spanEng {
+  margin: 0.8rem 0 0 0;
+}
+.boxAboutMe .aboutMe .spanEng span {
+  font-size: 1.5rem;
+  color: #00caf4;
+  font-weight: 400;
+}
+.boxAboutMe .aboutMe .spanEng span .down {
+  margin-top: 1rem;
+}
+.boxAboutMe .animation {
+  width: 50%;
+  margin: auto;
+  height: 100vh;
+}
+.boxAboutMe .back {
+  display: none;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .boxAboutMe {
+    flex-direction: column;
+  }
+  .boxAboutMe .aboutMe {
+    width: 90%;
+    padding: 1rem 0 0 5rem;
+    text-align: justify;
+  }
+  .boxAboutMe .aboutMe h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  .boxAboutMe .aboutMe p {
+    font-size: 0.8rem;
+    padding-bottom: 1.5rem;
+  }
+  .boxAboutMe .aboutMe .spanEng span {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  .boxAboutMe .aboutMe .spanEng span .down {
+    display: none;
+  }
+  .boxAboutMe .back {
+    display: none;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .boxAboutMe {
+    flex-direction: column;
+  }
+  .boxAboutMe .aboutMe {
+    width: 90%;
+    padding: 1rem 0 0 6rem;
+    text-align: justify;
+  }
+  .boxAboutMe .aboutMe h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  .boxAboutMe .aboutMe p {
+    font-size: 0.8rem;
+    padding-bottom: 1.5rem;
+  }
+  .boxAboutMe .aboutMe .spanEng {
+    margin: 0.5rem 0 0 0;
+  }
+  .boxAboutMe .aboutMe .spanEng span {
+    font-size: 1.6rem;
+  }
+  .boxAboutMe .aboutMe .spanEng span .down {
+    display: none;
+  }
+  .boxAboutMe .back {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .boxAboutMe .aboutMe {
+    width: 90%;
+    text-align: justify;
+  }
+  .boxAboutMe .aboutMe h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+  .boxAboutMe .aboutMe p {
+    font-size: 0.9rem;
+    padding-bottom: 1.5rem;
+  }
+  .boxAboutMe .aboutMe .spanEng {
+    margin: 0.5rem 0 0 0;
+  }
+  .boxAboutMe .aboutMe .spanEng span {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+  .boxAboutMe .aboutMe .spanEng span .down {
+    display: none;
+  }
+  .boxAboutMe .back {
+    display: none;
+  }
+}
+
+.boxPorfolio .linkProject {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.boxPorfolio .linkProject .boxProject {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  align-items: center;
+  width: 35%;
+}
+.boxPorfolio .linkProject .boxProject img {
+  width: 100%;
+  height: 60%;
+  border-radius: 5%;
+  object-fit: cover;
+}
+.boxPorfolio .linkProject .boxProject .btnAcces {
+  display: flex;
+  position: relative;
+  bottom: 1.5rem;
+  width: 100%;
+  border-radius: 10% 5% 5% 10%;
+}
+.boxPorfolio .linkProject .boxProject .btnAcces a {
+  text-decoration: none;
+  text-align: center;
+  color: #f3f3f3;
+  width: 80%;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 20% 20% 5% 5%;
+}
+.boxPorfolio .linkProject .boxProject .btnAcces a:hover {
+  background-color: #f3f3f3;
+  color: rgba(0, 0, 0, 0.8);
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .boxPorfolio {
+    background-color: rgb(31, 39, 43);
+    flex-direction: column;
+    padding-top: 2rem;
+    height: 100vh;
+  }
+  .boxPorfolio h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  .boxPorfolio .cardProject {
+    width: 60%;
+    height: 60%;
+    margin-left: 2rem;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .boxPorfolio {
+    background-color: rgb(31, 39, 43);
+    flex-direction: column;
+  }
+  .boxPorfolio .cardProject {
+    width: 60%;
+    height: 40%;
+    margin-left: 4rem;
+  }
+  .boxPorfolio .cardProject img {
+    margin: 2rem;
+  }
+  .boxPorfolio h2 {
+    margin: auto;
+    padding: 2rem;
+    font-size: 3rem;
+    font-weight: 500;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .boxPorfolio {
+    background-color: rgb(31, 39, 43);
+    flex-direction: column;
+  }
+  .boxPorfolio .cardProject {
+    width: 60%;
+    height: 40%;
+    margin-left: 4rem;
+  }
+  .boxPorfolio .cardProject img {
+    margin: 2rem;
+    width: 80%;
+  }
+  .boxPorfolio h2 {
+    margin: auto;
+    padding: 2rem;
+    font-size: 3rem;
+    font-weight: 500;
+  }
+}
+
+.boxSkill {
+  background-color: #1e2225;
+  height: 100vh;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.boxSkill .aboutSkill {
+  width: 40%;
+  height: 100%;
+  color: #f3f3f3;
+  padding: 2rem 6rem 0 0;
+  text-align: justify;
+}
+.boxSkill .aboutSkill h2 {
+  font-size: 3rem;
+  color: #00caf4;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+.boxSkill .aboutSkill p {
+  padding-bottom: 1.5rem;
+  font-size: 0.9em;
+}
+.boxSkill .tegnology {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 100%;
+}
+.boxSkill .tegnology .skill {
+  color: #f3f3f3;
+  text-align: center;
+  width: 30%;
+}
+.boxSkill .tegnology .skill h5 {
+  font-size: 0.8rem;
+  padding: 0.5rem;
+}
+.boxSkill .lastDown {
+  margin-top: 10rem;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .boxSkill {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .boxSkill .aboutSkill {
+    width: 90%;
+    padding: 1rem 0 0 5rem;
+    text-align: justify;
+    height: 100%;
+  }
+  .boxSkill .aboutSkill h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  .boxSkill .aboutSkill p {
+    font-size: 0.8rem;
+    padding-bottom: 1.5rem;
+  }
+  .boxSkill .aboutSkill .back {
+    display: none;
+  }
+  .boxSkill .lastDown {
+    display: none;
+  }
+  .boxSkill .tegnology {
+    justify-content: flex-end;
+    width: 80%;
+    height: 100%;
+    color: #f3f3f3;
+    text-align: center;
+    margin: 1rem 0 2rem 1.5rem;
+  }
+  .boxSkill .tegnology .skill {
+    width: 30%;
+    height: 15vh;
+    margin: 0.5rem 0.5rem 1rem 0.5rem;
+  }
+  .boxSkill .tegnology .skill h5 {
+    font-size: 0.6rem;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .boxSkill {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .boxSkill .aboutSkill {
+    width: 90%;
+    padding: 1rem 0 0 6rem;
+    text-align: justify;
+  }
+  .boxSkill .aboutSkill h2 {
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  .boxSkill .aboutSkill p {
+    font-size: 0.8rem;
+    padding-bottom: 1.5rem;
+  }
+  .boxSkill .aboutSkill .back {
+    display: none;
+  }
+  .boxSkill .lastDown {
+    display: none;
+  }
+  .boxSkill .tegnology {
+    margin-left: 15%;
+    width: 80%;
+    min-height: 50vh;
+    color: #f3f3f3;
+  }
+  .boxSkill .tegnology .skill {
+    width: 20%;
+    margin: 1rem 0.5rem 4rem 0.5rem;
+    padding-top: 0.6rem;
+  }
+  .boxSkill .tegnology .skill h5 {
+    font-size: 0.8rem;
+  }
+  .boxSkill .lastDown {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .boxSkill {
+    height: 100%;
+    display: flex;
+  }
+  .boxSkill .aboutSkill {
+    width: 60%;
+    padding: 2rem;
+    text-align: justify;
+  }
+  .boxSkill .aboutSkill h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+  .boxSkill .aboutSkill p {
+    font-size: 0.8rem;
+    padding-bottom: 1.8rem;
+  }
+  .boxSkill .aboutSkill .back {
+    display: none;
+  }
+  .boxSkill .tegnology {
+    justify-content: center;
+  }
+  .boxSkill .tegnology .skill {
+    height: 20vh;
+    padding-top: 1.5rem;
+  }
+  .boxSkill .tegnology .skill h5 {
+    font-size: 0.8rem;
+  }
+  .boxSkill .lastDown {
+    display: none;
+  }
+}
+
+.boxContact {
+  background-color: #1e2225;
+  height: 100vh;
+  display: flex;
+}
+.boxContact .aboutContact {
+  width: 50%;
+  height: 100%;
+  color: #f3f3f3;
+  padding: 4rem;
+  text-align: justify;
+}
+.boxContact .aboutContact h2 {
+  font-size: 3rem;
+  color: #00caf4;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+.boxContact .aboutContact p {
+  padding-bottom: 1.5rem;
+  width: 80%;
+  font-size: 0.9em;
+}
+.boxContact .aboutContact button {
+  border: 1px solid #00caf4;
+  margin: 1.5rem 0 0 0;
+  border-radius: 5%;
+  color: #00caf4;
+  width: 40%;
+}
+.boxContact .aboutContact button:hover {
+  background-color: #00caf4;
+  color: #f3f3f3;
+}
+.boxContact .aboutContact .textarea {
+  height: 20vh;
+}
+.boxContact .boxlocation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  min-width: 50%;
+  font-size: 0.9em;
+  height: 80%;
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  color: #f3f3f3;
+  opacity: 0.7;
+}
+.boxContact .boxlocation .map {
+  border-radius: 5%;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .boxContact {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .boxContact .aboutContact {
+    width: 90%;
+    padding: 1rem 0 0 5rem;
+    text-align: justify;
+  }
+  .boxContact .aboutContact h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  .boxContact .aboutContact p {
+    font-size: 0.8rem;
+    padding-bottom: 1.5rem;
+  }
+  .boxContact .boxlocation {
+    width: 90%;
+    min-height: 50vh;
+    margin: 2rem auto 1rem auto;
+    padding: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  }
+  .boxContact .boxlocation p {
+    font-size: 0.6rem;
+  }
+  .boxContact .boxlocation .map {
+    width: 80%;
+    height: 100%;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .boxContact {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .boxContact .aboutContact {
+    width: 90%;
+    padding: 1rem 0 0 5rem;
+  }
+  .boxContact .aboutContact h2 {
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  .boxContact .aboutContact p {
+    font-size: 0.8rem;
+    padding-bottom: 1.5rem;
+  }
+  .boxContact .boxlocation {
+    width: 100%;
+    min-height: 50vh;
+    margin: auto;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  }
+  .boxContact .boxlocation p {
+    font-size: 0.6rem;
+  }
+  .boxContact .boxlocation .map {
+    width: 80%;
+    height: 100%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .boxContact {
+    height: 90%;
+  }
+  .boxContact .aboutContact {
+    width: 50%;
+    padding: 1rem 0 0 2rem;
+    text-align: justify;
+  }
+  .boxContact .aboutContact h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+  .boxContact .aboutContact p {
+    font-size: 0.8rem;
+    padding-bottom: 1.5rem;
+  }
+  .boxContact .boxlocation {
+    width: 50%;
+    min-height: 60vh;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  }
+  .boxContact .boxlocation p {
+    font-size: 0.8rem;
+  }
+  .boxContact .boxlocation .map {
+    width: 80%;
+    height: 100%;
+  }
+}
+
+footer {
+  background-color: #1d242e;
+  height: 10vh;
+  color: #f3f3f3;
+  text-align: center;
+  font-size: 0.8rem;
+  padding: 4rem;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  footer {
+    height: 10vh;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  footer {
+    height: 10vh;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  footer {
+    height: 10vh;
+  }
+}
+
+/*# sourceMappingURL=style.csss.map */

@@ -1,0 +1,165 @@
+@import '../generals/variable';
+
+
+.boxPorfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    margin: 1rem auto 2rem auto;
+    h2 {
+        font-size: 4.5rem;
+        color: #00caf4;
+        font-weight: 500;
+        margin-bottom: 2rem;
+    }
+    .linkProject {
+        display: flex;
+        width:90%;
+        margin: auto;
+        .boxProject {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            object-fit: cover;
+                img {
+                    width: 80%;
+                    height: 100%;
+                    border-radius: 5%;
+                    opacity: .6;
+                    &:hover{
+                        opacity: 1;
+                    }
+                }
+            .btnAcces{
+                position: relative;
+                bottom: 2rem;
+                left: 3rem;
+                border-radius: 10%;
+                a{
+                    text-decoration: none;
+                    text-align: center;
+                    padding: .5rem;
+                    color: #f3f3f3;
+                    box-shadow: rgba(8, 7, 7, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+                    background-color: #f90041;
+                    border-radius:  5%;
+                    margin: 1rem;
+                    &:hover{
+                        background-color: #f3f3f3;
+                        color: #00caf4;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 480px) {
+        flex-direction: column;
+        padding-top: 1rem;
+        height: 100%;
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        .linkProject {
+            width: 100%;
+            flex-direction: column;
+            .boxProject {
+                flex-direction: column;
+                width: 70%;
+                margin-left: 25%;
+                object-fit: cover;
+                    img {
+                        width: 80%;
+                        height: 30%;
+                        border-radius: 5%;
+                        opacity: .6;
+                        &:hover{
+                            opacity: .9;
+                        }
+                    }
+                .btnAcces{
+                    left: 1.5rem;
+                    border-radius: 10%;
+                    a{
+                        background-color: #f90041;
+                        padding: .4rem;
+                        margin: .5rem;
+                    }
+                }
+            }
+        }
+
+    }
+
+    @media screen and (min-width: 481px) and (max-width: 768px) {
+        flex-direction: column;
+
+        h2 {
+            margin: auto;
+            padding: 2rem;
+            font-size: 3rem;
+            font-weight: 500;
+        }
+        .linkProject {
+            width: 80%;
+            flex-direction: column;
+            .boxProject {
+                flex-direction: column;
+                width: 70%;
+                margin-left: 30%;
+                object-fit: cover;
+                    img {
+                        width: 60%;
+                        height: 20%;
+                        border-radius: 5%;
+                        opacity: .6;
+                        &:hover{
+                            opacity: .9;
+                        }
+                    }
+                .btnAcces{
+                    position: relative;
+                    bottom: 3rem;
+                    left: 1.5rem;
+                    a{
+                        background-color: #f90041;
+                        text-decoration: none;
+                        text-align: center;
+                        padding: .6rem;
+                        margin: .5rem;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+        background-color: rgb(31, 39, 43);
+        flex-direction: column;
+
+        .cardProject {
+            width: 60%;
+            height: 40%;
+            margin-left: 4rem;
+
+            img {
+                margin: 2rem;
+                width: 80%;
+            }
+        }
+
+        h2 {
+            margin: auto;
+            padding: 2rem;
+            font-size: 3rem;
+            font-weight: 500;
+        }
+    }
+}

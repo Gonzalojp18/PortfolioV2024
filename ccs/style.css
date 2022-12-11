@@ -1,0 +1,930 @@
+.navBar {
+  justify-content: center;
+}
+.navBar .link {
+  margin: 1rem;
+}
+.navBar .link a {
+  text-decoration: none;
+  color: #f3f3f3;
+  border-bottom: 0.3em solid #1d242e;
+  font-weight: 400;
+  font-size: 0.8rem;
+  margin-right: 4rem;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .navBar {
+    flex-direction: column-reverse;
+    width: 25.4vw;
+  }
+  .navBar .link {
+    display: flex;
+    position: fixed;
+    top: 0.5rem;
+    flex-direction: column;
+    z-index: 10;
+    margin: 0.1rem;
+  }
+  .navBar .link a {
+    padding: 0.8rem 0.5rem 1rem 0;
+    font-size: 0.6rem;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .navBar {
+    flex-direction: column-reverse;
+    width: 24vw;
+  }
+  .navBar .link {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0.5rem;
+  }
+  .navBar .link a {
+    padding-top: 2rem;
+    text-decoration: none;
+    font-size: 0.6rem;
+  }
+}
+html * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto Flex", sans-serif;
+  background-image: url(../../source/bgPortfolio/codeBG.webp);
+  background-attachment: fixed;
+  opacity: 0.9;
+}
+
+header {
+  background-color: #292c2f;
+  height: 100vh;
+}
+header .socialMedia {
+  position: absolute;
+  left: 95%;
+  top: 40%;
+}
+header .socialMedia ul {
+  width: 30%;
+}
+header .socialMedia li {
+  list-style: none;
+  margin: 0.8rem;
+}
+header .boxName {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: 0.5rem 0 1rem 0;
+}
+header .boxName .name {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  min-width: 70%;
+  height: 100%;
+  font-size: 6rem;
+  margin: 0 10% 0 auto;
+  padding: 2rem;
+}
+header .boxName .name p {
+  font-size: 1.5rem;
+  color: #f3f3f3;
+}
+header .boxName .name .hi {
+  line-height: 2;
+  color: #f3f3f3;
+  font-size: 6rem;
+  border: 1.5px solid #00caf4;
+}
+header .boxName .name .hi:hover {
+  box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 5px;
+  transition: 0.3s all ease-in-out;
+}
+header .boxName .name .lname {
+  line-height: 2;
+  color: #f3f3f3;
+  font-size: 6rem;
+  border: 1.5px solid #f90041;
+}
+header .boxName .name .lname:hover {
+  box-shadow: rgba(209, 5, 15, 0.3) 0px 0px 0px 5px;
+  transition: 0.3s all ease-in-out;
+}
+header .boxName .name h1 {
+  color: #f3f3f3;
+  font-size: 6rem;
+}
+header .boxName .name h2 {
+  color: #f3f3f3;
+  font-size: 6rem;
+}
+header .boxName .name .quote {
+  margin: 0 0 3rem 0;
+  width: 100%;
+}
+header .boxName .name .quote p {
+  font-size: 0.8rem;
+  text-align: right;
+}
+header .down {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 1.5rem 0 1.5rem;
+  width: 100%;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  header {
+    background-color: #1a1c1e;
+  }
+  header .socialMedia {
+    position: absolute;
+    left: 1%;
+    top: 60%;
+  }
+  header .socialMedia ul li {
+    list-style: none;
+    margin: 0.8rem;
+  }
+  header .boxName {
+    margin-top: 2rem;
+    height: 100%;
+    width: 80%;
+  }
+  header .boxName .name {
+    width: 100%;
+    text-align: right;
+    height: 100%;
+    font-size: 2rem;
+    margin: 0;
+    padding: 0.5rem;
+  }
+  header .boxName .name p {
+    font-size: 0.8rem;
+    color: #f3f3f3;
+  }
+  header .boxName .name h1 {
+    color: #f3f3f3;
+    font-size: 2.5rem;
+  }
+  header .boxName .name h2 {
+    color: #f3f3f3;
+    font-size: 2.5rem;
+  }
+  header .boxName .name .hi {
+    line-height: 2;
+    font-size: 3rem;
+    border: 1px solid #00caf4;
+  }
+  header .boxName .name .hi:hover {
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 5px;
+    transition: 0.3s all ease-in-out;
+  }
+  header .boxName .name .lname {
+    line-height: 2;
+    color: #f3f3f3;
+    font-size: 3rem;
+    border: 1.5px solid #f90041;
+  }
+  header .boxName .name .lname:hover {
+    box-shadow: rgba(163, 9, 17, 0.3) 0px 0px 0px 5px;
+    transition: 0.3s all ease-in-out;
+  }
+  header .boxName .name .quote {
+    margin: 4rem 0 3rem 4rem;
+    width: 100%;
+  }
+  header .boxName .name .quote p {
+    font-size: 0.7rem;
+    width: 80%;
+  }
+  header .boxName .name .down {
+    display: none;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  header {
+    background-color: #1a1c1e;
+  }
+  header .socialMedia {
+    position: absolute;
+    left: 5%;
+    top: 70%;
+  }
+  header .socialMedia ul {
+    width: 10%;
+  }
+  header .socialMedia li {
+    list-style: none;
+    margin: 0.8rem;
+  }
+  header .boxName {
+    height: 100%;
+  }
+  header .boxName .name {
+    text-align: right;
+    height: 100%;
+    font-size: 2rem;
+    justify-content: center;
+  }
+  header .boxName .name p {
+    font-size: 1rem;
+    color: #f3f3f3;
+  }
+  header .boxName .name h1 {
+    color: #f3f3f3;
+    font-size: 2.5rem;
+  }
+  header .boxName .name h2 {
+    color: #f3f3f3;
+    font-size: 2.5rem;
+  }
+  header .boxName .name .hi {
+    line-height: 2;
+    color: #f3f3f3;
+    font-size: 3rem;
+    border: 1.5px solid #00caf4;
+  }
+  header .boxName .name .hi:hover {
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 5px;
+    transition: 0.3s all ease-in-out;
+  }
+  header .boxName .name .lname {
+    line-height: 2;
+    color: #f3f3f3;
+    font-size: 3rem;
+    border: 1.5px solid #f90041;
+  }
+  header .boxName .name .lname:hover {
+    box-shadow: rgba(163, 9, 17, 0.3) 0px 0px 0px 5px;
+    transition: 0.3s all ease-in-out;
+  }
+  header .boxName .name .quote {
+    margin: 4rem 0 3rem 6rem;
+    width: 90%;
+  }
+  header .boxName .name .quote p {
+    font-size: 0.6rem;
+    width: 80%;
+  }
+  header .boxName .name .down {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  header .socialMedia {
+    position: absolute;
+    left: 5%;
+    top: 50%;
+  }
+  header .boxName {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  header .boxName .name {
+    text-align: right;
+    width: 70%;
+    margin: 0 0 0 auto;
+    padding: 2rem;
+  }
+  header .boxName .name h1 {
+    font-size: 3rem;
+    font-weight: 400;
+  }
+  header .boxName .name p {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+  header .boxName .name h2 {
+    color: #f3f3f3;
+    font-size: 2.5rem;
+  }
+  header .boxName .name .hi {
+    line-height: 2;
+    font-size: 3rem;
+  }
+  header .boxName .name .hi:hover {
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 5px;
+    transition: 0.3s all ease-in-out;
+  }
+  header .boxName .name .lname {
+    line-height: 2;
+    color: #f3f3f3;
+    font-size: 3rem;
+    border: 1.5px solid #f90041;
+  }
+  header .quote {
+    font-size: 0.8rem;
+    margin: 2rem 0 1rem 0;
+  }
+  header .down {
+    margin-top: 4rem;
+  }
+}
+
+.boxServices {
+  background-color: #1a1c1e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+}
+.boxServices .boxCard {
+  font-size: 0.8rem;
+  margin: 1rem;
+  width: 20%;
+  height: 60%;
+  text-align: center;
+  color: #f3f3f3;
+}
+.boxServices .boxCard h6 {
+  margin: 0.7rem 0 0.7rem 0;
+  font-size: 1.5rem;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .boxServices {
+    display: none;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .boxServices {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .boxServices {
+    flex-wrap: nowrap;
+    height: 60%;
+  }
+  .boxServices .boxCard {
+    width: 100%;
+    height: 30vh;
+    font-size: 0.6rem;
+    margin: 0.5rem;
+    padding: 1rem;
+  }
+  .boxServices .boxCard h6 {
+    margin: 0.5rem 0 0.5rem 0;
+    font-size: 1rem;
+  }
+}
+
+.boxAboutMe {
+  display: flex;
+  background-color: #1d242e;
+  height: 100vh;
+}
+.boxAboutMe .aboutMe {
+  width: 50%;
+  height: 100%;
+  color: #f3f3f3;
+  padding: 4rem;
+  text-align: justify;
+}
+.boxAboutMe .aboutMe h2 {
+  font-size: 3rem;
+  color: #00caf4;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+.boxAboutMe .aboutMe p {
+  padding-bottom: 1.5rem;
+}
+.boxAboutMe .aboutMe .spanEng {
+  margin: 2rem 0 0 0;
+}
+.boxAboutMe .aboutMe .spanEng span {
+  font-size: 1.5rem;
+  color: #00caf4;
+  font-weight: 400;
+}
+.boxAboutMe .aboutMe .spanEng span .down {
+  margin-top: 4rem;
+}
+.boxAboutMe .animation {
+  color: #f3f3f3;
+  width: 50%;
+  text-align: center;
+  margin-top: 20%;
+  font-size: 4rem;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .boxAboutMe {
+    height: 100%;
+    flex-direction: column;
+  }
+  .boxAboutMe .aboutMe {
+    width: 90%;
+    padding: 1rem 0 0 5rem;
+    text-align: justify;
+  }
+  .boxAboutMe .aboutMe h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  .boxAboutMe .aboutMe p {
+    font-size: 0.8rem;
+    padding-bottom: 1.5rem;
+  }
+  .boxAboutMe .aboutMe .spanEng {
+    margin: 0.5rem 0 0 0;
+  }
+  .boxAboutMe .aboutMe .spanEng span {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  .boxAboutMe .aboutMe .spanEng span .down {
+    display: none;
+  }
+  .boxAboutMe .animation {
+    color: #f3f3f3;
+    width: 100%;
+    height: 40vh;
+    text-align: center;
+    margin-top: 30%;
+    font-size: 6rem;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .boxAboutMe {
+    flex-direction: column;
+  }
+  .boxAboutMe .aboutMe {
+    width: 90%;
+    padding: 1rem 0 0 6rem;
+    text-align: justify;
+  }
+  .boxAboutMe .aboutMe h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  .boxAboutMe .aboutMe p {
+    font-size: 0.8rem;
+    padding-bottom: 1.5rem;
+  }
+  .boxAboutMe .aboutMe .spanEng {
+    margin: 0.5rem 0 0 0;
+  }
+  .boxAboutMe .aboutMe .spanEng span {
+    font-size: 1.6rem;
+  }
+  .boxAboutMe .aboutMe .spanEng span .down {
+    display: none;
+  }
+  .boxAboutMe .aboutMe .animation {
+    color: #f3f3f3;
+    width: 90%;
+    height: 40vh;
+    text-align: center;
+    margin-top: 30%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .boxAboutMe .aboutMe {
+    width: 90%;
+    text-align: justify;
+  }
+  .boxAboutMe .aboutMe h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+  .boxAboutMe .aboutMe p {
+    font-size: 0.9rem;
+    padding-bottom: 1.5rem;
+  }
+  .boxAboutMe .aboutMe .spanEng {
+    margin: 0.5rem 0 0 0;
+  }
+  .boxAboutMe .aboutMe .spanEng span {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+  .boxAboutMe .aboutMe .spanEng span .down {
+    display: none;
+  }
+  .boxAboutMe .aboutMe .animation {
+    height: 50vh;
+    text-align: center;
+    margin-top: 10%;
+    font-size: 6rem;
+  }
+}
+
+.boxPorfolio {
+  background-color: #1a1c1e;
+  display: flex;
+  align-items: center;
+  min-height: 50vh;
+}
+.boxPorfolio h2 {
+  font-size: 3rem;
+  color: #00caf4;
+  margin-left: 3rem;
+  font-weight: 400;
+}
+.boxPorfolio .cardProject {
+  font-size: 0.8rem;
+  width: 30%;
+  height: 100%;
+  border: 0.5px solid #ccced1;
+}
+.boxPorfolio .cardProject img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .boxPorfolio {
+    background-color: rgb(31, 39, 43);
+    flex-direction: column-reverse;
+    height: 100vh;
+  }
+  .boxPorfolio .cardProject {
+    width: 80%;
+    border: 0.5px solid #ccced1;
+  }
+  .boxPorfolio h2 {
+    padding: 1rem;
+    font-size: 2.3rem;
+    font-weight: 500;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .boxPorfolio {
+    background-color: rgb(31, 39, 43);
+    flex-direction: column-reverse;
+    height: 100vh;
+  }
+  .boxPorfolio .cardProject {
+    width: 80%;
+    border: 0.5px solid #ccced1;
+  }
+  .boxPorfolio h2 {
+    margin: auto;
+    padding: 2rem;
+    font-size: 3rem;
+    font-weight: 500;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .boxPorfolio {
+    background-color: rgb(31, 39, 43);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 30vh;
+  }
+  .boxPorfolio .cardProject {
+    width: 100%;
+    border: 0.5px solid #ccced1;
+  }
+  .boxPorfolio h2 {
+    margin: auto;
+    padding: 2rem;
+    font-size: 3rem;
+    font-weight: 500;
+    text-align: center;
+  }
+}
+
+.boxSkill {
+  background-color: #1d242e;
+  height: 100vh;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.boxSkill .aboutSkill {
+  width: 50%;
+  height: 100%;
+  color: #f3f3f3;
+  padding: 4rem;
+  text-align: justify;
+}
+.boxSkill .aboutSkill h2 {
+  font-size: 3rem;
+  color: #00caf4;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+.boxSkill .aboutSkill p {
+  padding-bottom: 1.5rem;
+}
+.boxSkill .tegnology {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 100%;
+  color: #f3f3f3;
+  text-align: center;
+}
+.boxSkill .tegnology .skill {
+  width: 20%;
+  height: 20%;
+  margin: 2rem 1rem 0 1rem;
+  padding-top: 1.5rem;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+.boxSkill .tegnology .skill h5 {
+  font-size: 0.8rem;
+}
+.boxSkill .lastDown {
+  align-self: flex-end;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .boxSkill {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .boxSkill .aboutSkill {
+    width: 90%;
+    padding: 1rem 0 0 5rem;
+    text-align: justify;
+  }
+  .boxSkill .aboutSkill h2 {
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+  .boxSkill .aboutSkill p {
+    font-size: 0.8rem;
+    padding-bottom: 1.5rem;
+  }
+  .boxSkill .down {
+    display: none;
+  }
+  .boxSkill .tegnology {
+    justify-content: flex-end;
+    width: 80%;
+    height: 100%;
+    color: #f3f3f3;
+    text-align: center;
+    margin: 2rem 0 2rem 1.5rem;
+  }
+  .boxSkill .tegnology .skill {
+    width: 30%;
+    height: 15vh;
+    margin: 1rem 0.5rem 1rem 0.5rem;
+    padding-top: 0.8rem;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  }
+  .boxSkill .tegnology .skill h5 {
+    font-size: 0.6rem;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .boxSkill {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .boxSkill .aboutSkill {
+    width: 90%;
+    padding: 1rem 0 0 6rem;
+    text-align: justify;
+  }
+  .boxSkill .aboutSkill h2 {
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  .boxSkill .aboutSkill p {
+    font-size: 0.8rem;
+    padding-bottom: 1.5rem;
+  }
+  .boxSkill .tegnology {
+    justify-content: flex-end;
+    width: 80%;
+    min-height: 50vh;
+    color: #f3f3f3;
+    text-align: center;
+    margin: auto;
+  }
+  .boxSkill .tegnology .skill {
+    width: 20%;
+    margin: 1rem 1rem 4rem 1rem;
+    padding-top: 0.6rem;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  }
+  .boxSkill .tegnology .skill h5 {
+    font-size: 0.8rem;
+  }
+  .boxSkill .down {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .boxSkill {
+    height: 100%;
+    display: flex;
+  }
+  .boxSkill .aboutSkill {
+    width: 60%;
+    padding: 2rem;
+    text-align: justify;
+  }
+  .boxSkill .aboutSkill h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+  .boxSkill .aboutSkill p {
+    font-size: 0.8rem;
+    padding-bottom: 1.8rem;
+  }
+  .boxSkill .tegnology {
+    justify-content: flex-end;
+    text-align: center;
+  }
+  .boxSkill .tegnology .skill {
+    width: 40%;
+    height: 20vh;
+    margin: 1rem 0 1rem 1rem;
+    padding-top: 1.5rem;
+  }
+  .boxSkill .tegnology .skill h5 {
+    font-size: 0.8rem;
+  }
+  .boxSkill .down {
+    display: none;
+  }
+}
+
+.boxContact {
+  background-color: #1d242e;
+  height: 100vh;
+  display: flex;
+}
+.boxContact .aboutContact {
+  width: 50%;
+  height: 100%;
+  color: #f3f3f3;
+  padding: 4rem;
+  text-align: justify;
+}
+.boxContact .aboutContact h2 {
+  font-size: 3rem;
+  color: #00caf4;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+.boxContact .aboutContact p {
+  padding-bottom: 1.5rem;
+  width: 80%;
+}
+.boxContact .aboutContact button {
+  border: 1px solid #00caf4;
+  margin: 1.5rem 0 0 0;
+  border-radius: 5%;
+  color: #00caf4;
+  width: 40%;
+}
+.boxContact .aboutContact button:hover {
+  background-color: #00caf4;
+  color: #f3f3f3;
+}
+.boxContact .aboutContact .textarea {
+  height: 20vh;
+}
+.boxContact .boxlocation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  min-width: 50%;
+  height: 80%;
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  color: #f3f3f3;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .boxContact {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .boxContact .aboutContact {
+    width: 90%;
+    padding: 1rem 0 0 5rem;
+    text-align: justify;
+  }
+  .boxContact .aboutContact h2 {
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+  .boxContact .aboutContact p {
+    font-size: 0.8rem;
+    padding-bottom: 1.5rem;
+  }
+  .boxContact .boxlocation {
+    width: 90%;
+    min-height: 50vh;
+    margin: 2rem auto 1rem auto;
+    padding: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  }
+  .boxContact .boxlocation p {
+    font-size: 0.6rem;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .boxContact {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .boxContact .aboutContact {
+    width: 90%;
+    padding: 1rem 0 0 5rem;
+  }
+  .boxContact .aboutContact h2 {
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  .boxContact .aboutContact p {
+    font-size: 0.8rem;
+    padding-bottom: 1.5rem;
+  }
+  .boxContact .boxlocation {
+    width: 100%;
+    min-height: 50vh;
+    margin: auto;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  }
+  .boxContact .boxlocation p {
+    font-size: 0.6rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .boxContact {
+    height: 90%;
+  }
+  .boxContact .aboutContact {
+    width: 50%;
+    padding: 1rem 0 0 2rem;
+    text-align: justify;
+  }
+  .boxContact .aboutContact h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+  .boxContact .aboutContact p {
+    font-size: 0.8rem;
+    padding-bottom: 1.5rem;
+  }
+  .boxContact .boxlocation {
+    width: 50%;
+    min-height: 60vh;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  }
+  .boxContact .boxlocation p {
+    font-size: 0.8rem;
+  }
+}
+
+footer {
+  background-color: #1d242e;
+  height: 10vh;
+  color: #f3f3f3;
+  text-align: center;
+  font-size: 0.8rem;
+  padding: 2rem;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  footer {
+    height: 20vh;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  footer {
+    height: 20vh;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  footer {
+    height: 20vh;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

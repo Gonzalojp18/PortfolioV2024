@@ -1,0 +1,166 @@
+.boxSkill{
+    background-color: #1e2225;
+    height:100vh;
+    display: flex;
+    flex-direction: row-reverse;
+    .aboutSkill{
+        width:40%;
+        height:100%;
+        color: #f3f3f3;
+        padding: 2rem 6rem 0 0;
+        text-align: justify;
+        h2{
+            font-size: 3rem;
+            color: #00caf4;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+        p{
+            padding-bottom: 1.5rem;
+            font-size: 1em;
+        }
+    }
+    .tegnology{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0;
+        justify-content:center;
+        align-items:center;
+        width:60%;
+        height:100%;
+        .skill{
+            color: #f3f3f3;
+            text-align: center;
+            width: 30%;
+            h5{
+                font-size:.8rem;
+                padding: .5rem;
+            }
+        }
+    }
+    .lastDown{
+        margin-top: 8rem;
+    }
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    .aboutSkill{
+        width:90%;
+        padding: 1rem 0 0 5rem;
+        text-align: justify;
+        height: 100%;
+        h2{
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        p{
+            font-size: .8rem;
+            padding-bottom: 1.5rem;
+        }
+        .back{
+            display: none;
+        }
+}
+.lastDown{
+    display: none;
+}
+
+.tegnology{
+    justify-content: flex-end;
+    width:80%;
+    height:100%;
+    color: #f3f3f3;
+    text-align: center;
+    margin: 1rem 0 2rem 1.5rem;
+    .skill{
+        width: 30%;
+        height: 15vh;
+        margin: .5rem .5rem 1rem .5rem;
+        h5{
+            font-size:.6rem;
+        }
+    }
+}
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    .aboutSkill{
+        width:90%;
+        padding: 1rem 0 0 6rem;
+        text-align: justify;
+        h2{
+            font-size: 2.3rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        p{
+            font-size: .8rem;
+            padding-bottom: 1.5rem;
+        }
+        .back{
+            display: none;
+        }
+}
+.lastDown{
+    display: none;
+}
+.tegnology{
+    margin-left: 15%;
+    width:80%;
+    min-height: 50vh;
+    color: #f3f3f3;
+    .skill{
+        width: 20%;
+        margin: 1rem .5rem 4rem .5rem;
+        padding-top: .6rem;
+        h5{
+            font-size:.8rem;
+        }
+    }
+}
+.lastDown{
+    display: none;
+}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    height:100%;
+    display: flex;
+    .aboutSkill{
+        width:60%;
+        padding: 2rem;
+        text-align: justify;
+        h2{
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+        p{
+            font-size: .8rem;
+            padding-bottom: 1.8rem;
+        }
+        .back{
+            display: none;
+        }
+}
+.tegnology{
+    justify-content: center;
+    .skill{
+        height: 20vh;
+        padding-top: 1.5rem;
+        h5{
+            font-size:.8rem;
+        }
+    }
+}
+.lastDown{
+    display: none;
+}
+}
+
+}

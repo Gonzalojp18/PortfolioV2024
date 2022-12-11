@@ -1,0 +1,88 @@
+
+#mode{
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    font-size: .7em;
+    background-color: #1d242e;
+    border-radius: 10px;
+    padding: .3em;
+    color: #f3f3f3;
+    &:hover{
+        background-color: #6d6f72;
+    }
+}
+.navBar{
+    justify-content: center;
+    ul{
+        display: flex;
+        justify-content: space-evenly;
+        margin: 1rem;
+        width: 100%;
+        li{
+            display: flex;
+            justify-content: space-between;
+            padding: .5rem;
+            a{
+                text-decoration: none;
+                color: #f3f3f3;
+                text-align: center;
+                border-bottom: .3em solid #283240;
+                font-weight: 400;
+                font-size: .8rem;
+                padding: .2em;
+                &:hover{
+                    border-bottom: none;
+                    box-shadow: rgb(126, 161, 201) 0px 0px 0px 2px, rgb(76, 118, 167) 0px 2px 3px -1px, rgb(70, 104, 157) 0px 1px 4px inset;
+                    transition: .2s all ease-in-out;
+
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 480px) {
+        flex-direction: column-reverse;
+            .link{
+                position: fixed;
+                top: .5rem;
+                flex-direction: column;
+                margin: .1rem;
+                    a{
+                        padding: .8rem .5rem 1rem 0;
+                        font-size: .6rem;
+                        margin-right: 0;
+                        &:hover{
+                            border: none;
+                        }
+                    }
+                }
+            }
+@media screen and (min-width: 481px) and (max-width: 768px){
+    flex-direction: column-reverse;
+    width: 24vw;
+        .link{
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            top: .5rem;
+                a{
+                    padding-top: 2rem;
+                    text-decoration: none;
+                    font-size: .6rem;
+                    &:hover{
+                        border: none;
+                    }
+                }
+            }
+        }
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+}
+}
+
+
+
+
+
