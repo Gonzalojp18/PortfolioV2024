@@ -19,7 +19,7 @@
   display: flex;
   justify-content: space-evenly;
   margin: 1rem;
-  width: 100%;
+  width: 80%;
 }
 .navBar ul li {
   display: flex;
@@ -32,7 +32,7 @@
   text-align: center;
   border-bottom: 0.3em solid #283240;
   font-weight: 400;
-  font-size: 0.8rem;
+  font-size: 1rem;
   padding: 0.2em;
 }
 .navBar ul li a:hover {
@@ -139,16 +139,16 @@ header .boxName {
 header .boxName .name {
   text-align: right;
   width: 70%;
-  margin: 0 10rem 0 auto;
+  margin: 0 20% 0 auto;
 }
 header .boxName .name p {
-  font-size: 1.5rem;
+  font-size: 2.6rem;
   color: #f3f3f3;
 }
 header .boxName .name .hi {
   line-height: 2;
   color: #f3f3f3;
-  font-size: 4rem;
+  font-size: 4.8rem;
   border: 1.5px solid #00caf4;
 }
 header .boxName .name .hi:hover {
@@ -159,7 +159,7 @@ header .boxName .name .hi:hover {
 header .boxName .name .lname {
   line-height: 2;
   color: #f3f3f3;
-  font-size: 4rem;
+  font-size: 4.8rem;
   border: 1.5px solid #f90041;
 }
 header .boxName .name .lname:hover {
@@ -169,18 +169,18 @@ header .boxName .name .lname:hover {
 }
 header .boxName .name h1 {
   color: #f3f3f3;
-  font-size: 3rem;
+  font-size: 3.8rem;
 }
 header .boxName .name h2 {
   color: #f3f3f3;
-  font-size: 3rem;
+  font-size: 3.8rem;
 }
 header .quote {
   width: 30%;
-  margin-left: 45%;
+  margin-left: 30%;
 }
 header .quote p {
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: #f3f3f3;
   text-align: right;
 }
@@ -189,7 +189,7 @@ header .down {
   justify-content: space-around;
   align-items: flex-end;
   width: 100%;
-  margin-top: 6rem;
+  margin-top: 10%;
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
   header {
@@ -396,15 +396,19 @@ header .down {
   height: 60%;
   text-align: center;
   color: #f3f3f3;
+  font-family: Montserrat, sans-serif;
+  letter-spacing: normal;
+  line-height: normal;
+  -webkit-font-smoothing: antialiased;
 }
 .boxServices .boxCard h6 {
   margin: 0.7rem 0 0.7rem 0;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
 .boxServices .boxCard p {
   line-height: 2;
   text-align: center;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .boxServices {
@@ -444,26 +448,38 @@ header .down {
   margin: auto;
   text-align: center;
   color: #f3f3f3;
-  padding: 2rem 0 0 4rem;
+  padding: 8% 0 0 4rem;
 }
 .boxAboutMe .aboutMe h2 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   color: #00caf4;
-  margin-bottom: 1rem;
-  font-weight: 500;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  font-family: Montserrat, sans-serif;
+  letter-spacing: normal;
+  line-height: normal;
+  text-align: left;
+  -webkit-font-smoothing: antialiased;
 }
 .boxAboutMe .aboutMe p {
   padding-bottom: 1rem;
-  font-size: 1em;
+  font-size: 1.5em;
+  font-family: Montserrat, sans-serif;
+  letter-spacing: normal;
+  line-height: normal;
+  text-align: left;
+  -webkit-font-smoothing: antialiased;
 }
 .boxAboutMe .aboutMe .spanEng {
   margin: 2rem 0 0 0;
 }
 .boxAboutMe .aboutMe .spanEng span {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #00caf4;
   font-weight: 300;
   letter-spacing: 0.5rem;
+  font-family: Montserrat, sans-serif;
+  letter-spacing: normal;
 }
 .boxAboutMe .aboutMe .spanEng span .down {
   margin-top: 3rem;
@@ -567,14 +583,19 @@ header .down {
   align-items: center;
   justify-content: space-evenly;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   margin: 1rem auto 2rem auto;
 }
 .boxPorfolio h2 {
   font-size: 4.5rem;
   color: #00caf4;
-  font-weight: 500;
+  font-weight: bold;
   margin-bottom: 2rem;
+  font-family: Montserrat, sans-serif;
+  letter-spacing: normal;
+  line-height: normal;
+  text-align: left;
+  -webkit-font-smoothing: antialiased;
 }
 .boxPorfolio .linkProject {
   display: flex;
@@ -735,14 +756,19 @@ header .down {
   text-align: justify;
 }
 .boxSkill .aboutSkill h2 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   color: #00caf4;
   margin-bottom: 1rem;
-  font-weight: 500;
+  font-weight: bold;
+  font-family: Montserrat, sans-serif;
 }
 .boxSkill .aboutSkill p {
   padding-bottom: 1.5rem;
-  font-size: 1em;
+  font-size: 1.5em;
+  font-family: Montserrat, sans-serif;
+  letter-spacing: normal;
+  line-height: normal;
+  -webkit-font-smoothing: antialiased;
 }
 .boxSkill .tegnology {
   display: flex;
@@ -903,10 +929,15 @@ header .down {
   text-align: justify;
 }
 .boxContact .aboutContact h2 {
-  font-size: 3rem;
+  font-size: 4.5rem;
   color: #00caf4;
   margin-bottom: 1rem;
-  font-weight: 400;
+  font-weight: bold;
+  font-family: Montserrat, sans-serif;
+  letter-spacing: normal;
+  line-height: normal;
+  text-align: left;
+  -webkit-font-smoothing: antialiased;
 }
 .boxContact .aboutContact p {
   padding-bottom: 1.5rem;

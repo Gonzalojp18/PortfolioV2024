@@ -10,14 +10,19 @@
         padding: 2rem 6rem 0 0;
         text-align: justify;
         h2{
-            font-size: 3rem;
+            font-size: 3.5rem;
             color: #00caf4;
             margin-bottom: 1rem;
-            font-weight: 500;
+            font-weight: bold;
+            font-family: Montserrat, sans-serif;
         }
         p{
             padding-bottom: 1.5rem;
-            font-size: 1em;
+            font-size: 1.5em;
+            font-family: Montserrat, sans-serif;
+            letter-spacing: normal;
+            line-height: normal;
+            -webkit-font-smoothing: antialiased;
         }
     }
     .tegnology{
