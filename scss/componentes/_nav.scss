@@ -57,7 +57,8 @@
     z-index: 999;
     height: 80vh;
     .link{
-        height: 70%;
+        height: 80%;
+        justify-content: space-between;
         li{
             a{
                 font-size: 1rem;

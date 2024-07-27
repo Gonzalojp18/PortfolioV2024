@@ -57,7 +57,8 @@
     height: 80vh;
   }
   .navBar .link {
-    height: 70%;
+    height: 80%;
+    justify-content: space-between;
   }
   .navBar .link li a {
     font-size: 1rem;

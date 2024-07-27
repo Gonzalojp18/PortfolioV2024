@@ -28,5 +28,3 @@ VANTA.DOTS({
   backgroundColor: 0xdfc22c,
 })
 
-
-// color: #d8b90a;
