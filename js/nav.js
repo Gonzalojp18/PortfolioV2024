@@ -11,7 +11,7 @@ const closeNav = () => {
     nav.classList.remove('active');
 }
 
-// Añadir event listener a cada enlace del menú
+// event on each element in menu
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
         // Esperar un breve tiempo para permitir la navegación antes de cerrar el menú
@@ -19,5 +19,5 @@ navLinks.forEach(link => {
     });
 });
 
-// Event listener para abrir/cerrar el menú
+// open and close the menu
 menu.addEventListener("click", isOpen);
