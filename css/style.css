@@ -59,6 +59,7 @@
   .navBar .link {
     height: 80%;
     justify-content: space-between;
+    padding: 2rem;
   }
   .navBar .link li a {
     font-size: 1rem;
@@ -198,10 +199,10 @@ body {
   }
   .header .boxName .name .avaible {
     font-size: 0.8rem;
-    font-weight: 800;
+    font-weight: 700;
     padding: 0.5rem;
-    width: 90%;
-    letter-spacing: 1.5px;
+    width: 75%;
+    letter-spacing: 1.4px;
     margin: 0.5rem 0 0 0;
   }
   .header .boxName .name .down {
