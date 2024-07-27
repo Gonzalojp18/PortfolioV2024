@@ -1,140 +1,107 @@
 .boxAboutMe{
     display: flex;
-    background-color: #1e2225;
     .aboutMe{
-        width:60%;
+        width:95%;
         height: 100vh;
-        margin: auto;
-        text-align:center;
-        color: #f3f3f3;
-        padding: 8% 0  0 4rem;
-        h2{
-            font-size: 3.5rem;
-            color: #00caf4;
-            margin-bottom: 2rem;
+        display: flex;
+        color: #23153c;
+        .bitMe {
+            width: 90%;
+            font-size: 2.3rem;
+            font-weight: 200;
+            height: 10%;
+            padding: 2.5rem .5rem 0 2rem;
+            .me{
+                color: red;
+            }
+        }
+        .description {
+            font-size: 1.1rem;
+            width: 60%;
+            text-align: justify;
+            padding: 5% 0 0 5%;
+            p {
+                opacity: 0;
+                transform: translateY(50px);
+                transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+            }
+        }
+    }
+    .back{
+        display: none;
+    }
+
+
+@media screen and (min-width: 320px) and (max-width: 760px) {
+    height: 100vh;
+    .aboutMe{
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+        font-weight: bold;
+        .bitMe {
+            width: 90%;
+            font-size: 1.4rem;
+            padding: 5px 5px 1rem 5px;
             font-weight: bold;
-            font-family: Montserrat, sans-serif;
-            letter-spacing: normal;
-            line-height: normal;
-            text-align: left;
-            -webkit-font-smoothing: antialiased;
         }
-        p{
-            padding-bottom: 1rem;
-            font-size: 1.5em;
-            font-family: Montserrat, sans-serif;
-            letter-spacing: normal;
-            line-height: normal;
-            text-align: left;
-            -webkit-font-smoothing: antialiased;
-        }
-        .spanEng{
-            margin: 2rem 0 0 0;
-            span{
-                font-size: 2.5rem;
-                color: #00caf4;
-                font-weight: 300;
-                letter-spacing:  .5rem;
-                font-family: Montserrat, sans-serif;
-                letter-spacing: normal;
-                .down{
-                    margin-top:3rem;
-                }
-            }
-        }
-    }
-    .back{
-        display: none;
-    }
-
-
-@media screen and (min-width: 320px) and (max-width: 480px) {
-    flex-direction: column;
-    .aboutMe{
-        height: 100%;
-        width:80%;
-        padding: 1rem 0 0 5rem;
-        text-align: justify;
-        h2{
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-        p{
-            font-size: .8rem;
-            padding-bottom: 1.5rem;
-        }
-    .spanEng{
-            span{
-                font-size: 1rem;
-                font-weight: 700;
-            .down{
-                display: none;
+        .description {
+            margin: .5rem 0 1rem 0;
+            font-size: 1.1rem;
+            width: 95%;
+            text-align: justify;
+            padding: 1rem 1.5rem 0 1rem;
+            p {
+                opacity: 0;
+                transform: translateY(50px);
+                transition: opacity 0.5s ease-out, transform 0.5s ease-out;
             }
         }
     }
 }
-.back{
-    display: none;
-}
-}
-@media screen and (min-width: 481px) and (max-width: 768px) {
-    flex-direction: column;
+@media screen and (min-width: 768px) and (max-width: 1020px) {
     .aboutMe{
-        width:80%;
-        height: 100%;
-        padding: 1rem 0 0 6rem;
-        text-align: justify;
-        h2{
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+        .bitMe {
+            width: 90%;
+            font-size: 1.5rem;
+            padding: 5px 5px 0 5px;
+        }
+        .description {
+            font-size: 1.1rem;
+            width: 90%;
+            text-align: justify;
+            padding: 1% 0 0 1rem;
+            p {
+                opacity: 0;
+                transform: translateY(50px);
+                transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1380px) and (max-width: 1950px) {
+    .aboutMe{
+        .bitMe {
             font-size: 3rem;
-            margin-bottom: 1rem;
+            font-weight: 300;
         }
-        p{
-            font-size: .8rem;
-            padding-bottom: 1.5rem;
-        }
-        .spanEng{
-            margin: .5rem 0 0 0;
-            span{
-                font-size: 1.6rem;
-                .down{
-                    display: none;
-                }
+        .description {
+            font-size: 1.6rem;
+            width: 60%;
+            text-align: justify;
+            padding: 5% 0 0 5%;
+            p {
+                opacity: 0;
+                transform: translateY(50px);
+                transition: opacity 0.5s ease-out, transform 0.5s ease-out;
             }
         }
-}
-    .back{
-        display: none;
     }
-}
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-    .aboutMe{
-        width:90%;
-        text-align:justify;
-        h2{
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            font-weight: 500;
-        }
-        p{
-            font-size: .9rem;
-            padding-bottom: 1.5rem;
-        }
-        .spanEng{
-            margin: .5rem 0 0 0;
-            span{
-                font-size: 1.5rem;
-                font-weight: 400;
-                .down{
-                    display: none;
-                }
-            }
-        }
-}
-.back{
-    display: none;
-}
 }
 
 }

@@ -1,0 +1,12 @@
+.active {
+    clip-path: circle(100% at 5% 90%);
+    @media all and (min-width: 20rem) and (max-width: 30rem) {
+          clip-path: circle(70% at 0% 30%);
+    }
+    @media all and (min-width: 30rem) and (max-width: 48rem) {
+      clip-path: circle(90% at 0% 50%);
+    }
+    @media all and (min-width: 48rem) and (max-width: 60rem) {
+      clip-path: circle(90% at 20% 50%);
+    }
+  }

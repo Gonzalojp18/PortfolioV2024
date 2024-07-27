@@ -13,70 +13,55 @@
 }
 
 .navBar {
-  justify-content: center;
-}
-.navBar ul {
-  display: flex;
-  justify-content: space-evenly;
-  margin: 1rem;
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
   width: 80%;
+  transition: all 1s ease-in-out;
+  clip-path: circle(0% at 100% 0%);
+  z-index: 999;
+  background: linear-gradient(120deg, #4c3279 30.71%, #23153c);
 }
-.navBar ul li {
+.navBar .link {
+  all: unset;
   display: flex;
-  justify-content: space-between;
+  height: 90vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  list-style: none;
+  margin: 0 0 0 30%;
+}
+.navBar .link li a {
+  color: #cad6dd;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5rem;
+  letter-spacing: 0.3em;
+  font-family: "Roboto Flex", sans-serif;
+}
+.navBar .link li a:hover {
+  background: linear-gradient(100deg, #dfc22c 20.71%, #e8ca35);
+  border-radius: 1rem;
+  transition: all 0.2s ease-in-out;
   padding: 0.5rem;
 }
-.navBar ul li a {
-  text-decoration: none;
-  color: #f3f3f3;
-  text-align: center;
-  border-bottom: 0.3em solid #283240;
-  font-weight: 400;
-  font-size: 1rem;
-  padding: 0.2em;
-}
-.navBar ul li a:hover {
-  border-bottom: none;
-  box-shadow: rgb(126, 161, 201) 0px 0px 0px 2px, rgb(76, 118, 167) 0px 2px 3px -1px, rgb(70, 104, 157) 0px 1px 4px inset;
-  transition: 0.2s all ease-in-out;
-}
-@media screen and (min-width: 320px) and (max-width: 480px) {
+@media screen and (min-width: 320px) and (max-width: 760px) {
   .navBar {
-    flex-direction: column-reverse;
+    top: 2rem;
+    left: 2rem;
+    width: 85%;
+    transition: all 1s ease-in-out;
+    clip-path: circle(0% at 100% 0%);
+    z-index: 999;
+    height: 100vh;
   }
   .navBar .link {
-    position: fixed;
-    top: 0.5rem;
-    flex-direction: column;
-    margin: 0.1rem;
+    height: 70%;
   }
-  .navBar .link a {
-    padding: 0.8rem 0.5rem 1rem 0;
-    font-size: 0.6rem;
-    margin-right: 0;
-  }
-  .navBar .link a:hover {
-    border: none;
-  }
-}
-@media screen and (min-width: 481px) and (max-width: 768px) {
-  .navBar {
-    flex-direction: column-reverse;
-    width: 24vw;
-  }
-  .navBar .link {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    top: 0.5rem;
-  }
-  .navBar .link a {
-    padding-top: 2rem;
-    text-decoration: none;
-    font-size: 0.6rem;
-  }
-  .navBar .link a:hover {
-    border: none;
+  .navBar .link li a {
+    font-size: 1rem;
+    justify-content: flex-end;
   }
 }
 html * {
@@ -87,1016 +72,873 @@ html * {
 
 body {
   font-family: "Roboto Flex", sans-serif;
-  background-color: #292c2f;
   opacity: 0.9;
+  background-color: #23153c;
 }
 
 .light {
   background-color: #f3f3f3;
 }
 
-header {
+.header {
   width: 100%;
-  margin: auto;
-  background-color: #292c2f;
   height: 100vh;
 }
-header .socialMedia {
-  position: absolute;
-  left: 95%;
-  top: 40%;
-}
-header .socialMedia .lnkdn:hover {
-  transition: 0.2s all ease-in-out;
-  box-shadow: rgb(15, 102, 201) 0px 0px 0px 5px, rgb(15, 72, 138) 0px 4px 6px -1px, rgb(14, 72, 157) 0px 1px 5px inset;
-}
-header .socialMedia .git:hover {
-  transition: 0.2s all ease-in-out;
-  box-shadow: rgb(77, 77, 79) 0px 0px 0px 5px, rgb(93, 92, 92) 0px 4px 6px -1px, rgb(125, 123, 123) 0px 1px 5px inset;
-}
-header .socialMedia .tw:hover {
-  transition: 0.2s all ease-in-out;
-  box-shadow: rgb(26, 163, 216) 0px 0px 0px 5px, rgb(30, 190, 221) 0px 4px 6px -1px, rgb(16, 148, 199) 0px 1px 5px inset;
-}
-header .socialMedia .med:hover {
-  transition: 0.2s all ease-in-out;
-  box-shadow: rgb(221, 222, 223) 0px 0px 0px 5px, rgb(231, 232, 233) 0px 4px 6px -1px, rgb(236, 237, 237) 0px 1px 5px inset;
-}
-header .socialMedia ul {
-  width: 30%;
-}
-header .socialMedia li {
-  list-style: none;
-  margin: 0.8rem;
-}
-header .boxName {
+.header .boxName {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-}
-header .boxName .name {
-  text-align: right;
   width: 70%;
-  margin: 0 20% 0 auto;
+  visibility: visible;
 }
-header .boxName .name p {
-  font-size: 2.6rem;
-  color: #f3f3f3;
-}
-header .boxName .name .hi {
-  line-height: 2;
-  color: #f3f3f3;
-  font-size: 4.8rem;
-  border: 1.5px solid #00caf4;
-}
-header .boxName .name .hi:hover {
-  box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 10px;
-  transition: 0.4s all ease-in-out;
-  background-color: rgb(3, 102, 214);
-}
-header .boxName .name .lname {
-  line-height: 2;
-  color: #f3f3f3;
-  font-size: 4.8rem;
-  border: 1.5px solid #f90041;
-}
-header .boxName .name .lname:hover {
-  box-shadow: rgba(209, 5, 15, 0.3) 0px 0px 0px 10px;
-  transition: 0.4s all ease-in-out;
-  background-color: rgb(199, 18, 18);
-}
-header .boxName .name h1 {
-  color: #f3f3f3;
-  font-size: 3.8rem;
-}
-header .boxName .name h2 {
-  color: #f3f3f3;
-  font-size: 3.8rem;
-}
-header .quote {
-  width: 30%;
-  margin-left: 30%;
-}
-header .quote p {
-  font-size: 1rem;
-  color: #f3f3f3;
-  text-align: right;
-}
-header .down {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-end;
+.header .boxName .name {
   width: 100%;
-  margin-top: 10%;
+  padding: 15% 0 5% 10%;
+  color: #cad6dd;
 }
-@media screen and (min-width: 320px) and (max-width: 480px) {
-  header {
-    width: 100%;
-    background-color: #1a1c1e;
-  }
-  header .socialMedia {
-    position: absolute;
-    left: 1%;
-    top: 60%;
-  }
-  header .socialMedia ul li {
-    list-style: none;
-    margin: 0.8rem;
-  }
-  header .boxName {
-    width: 80%;
-    margin: 1rem 0 0 2rem;
-  }
-  header .boxName .name {
-    width: 100%;
-  }
-  header .boxName .name p {
-    font-size: 0.9rem;
-    color: #f3f3f3;
-  }
-  header .boxName .name h1 {
-    color: #f3f3f3;
-    font-size: 2.5rem;
-  }
-  header .boxName .name h2 {
-    color: #f3f3f3;
-    font-size: 2.5rem;
-  }
-  header .boxName .name .hi {
-    line-height: 2;
-    font-size: 2.5rem;
-    border: 1px solid #00caf4;
-  }
-  header .boxName .name .hi:hover {
-    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 5px;
-    transition: 0.3s all ease-in-out;
-  }
-  header .boxName .name .lname {
-    line-height: 2;
-    color: #f3f3f3;
-    font-size: 2.5rem;
-    border: 1.5px solid #f90041;
-  }
-  header .boxName .name .lname:hover {
-    box-shadow: rgba(163, 9, 17, 0.3) 0px 0px 0px 5px;
-    transition: 0.3s all ease-in-out;
-  }
-  header .boxName .quote {
-    width: 80%;
-    margin-left: 25%;
-  }
-  header .boxName .quote p {
-    font-size: 0.6rem;
-  }
-  header .boxName .down {
-    display: none;
-  }
+.header .boxName .name p {
+  font-size: 2rem;
+  margin: 1rem 0 1rem 0;
 }
-@media screen and (min-width: 481px) and (max-width: 768px) {
-  header {
-    background-color: #1a1c1e;
-  }
-  header .socialMedia {
-    position: absolute;
-    left: 5%;
-    top: 70%;
-  }
-  header .socialMedia ul {
-    width: 10%;
-  }
-  header .socialMedia li {
-    list-style: none;
-    margin: 0.8rem;
-  }
-  header .boxName {
-    height: 100%;
-    width: 80%;
-    margin: 1rem 0 0 2rem;
-  }
-  header .boxName .name {
-    width: 100%;
-    text-align: right;
-    font-size: 2rem;
-  }
-  header .boxName .name p {
-    font-size: 1rem;
-    color: #f3f3f3;
-  }
-  header .boxName .name h1 {
-    color: #f3f3f3;
-    font-size: 2.5rem;
-  }
-  header .boxName .name h2 {
-    color: #f3f3f3;
-    font-size: 2.5rem;
-  }
-  header .boxName .name .hi {
-    line-height: 2;
-    color: #f3f3f3;
-    font-size: 3rem;
-    border: 1.5px solid #00caf4;
-  }
-  header .boxName .name .hi:hover {
-    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 5px;
-    transition: 0.3s all ease-in-out;
-  }
-  header .boxName .name .lname {
-    line-height: 2;
-    color: #f3f3f3;
-    font-size: 3rem;
-    border: 1.5px solid #f90041;
-  }
-  header .boxName .name .lname:hover {
-    box-shadow: rgba(163, 9, 17, 0.3) 0px 0px 0px 5px;
-    transition: 0.3s all ease-in-out;
-  }
-  header .boxName .quote {
-    margin: 2rem 0 3rem 2rem;
-    width: 80%;
-    margin-left: 20%;
-  }
-  header .boxName .quote p {
-    font-size: 0.6rem;
-    width: 100%;
-  }
-  header .boxName .down {
-    display: none;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  header .socialMedia {
-    position: absolute;
-    left: 5%;
-    top: 50%;
-  }
-  header .boxName {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-  }
-  header .boxName .name {
-    width: 70%;
-    margin: 0 0 0 auto;
-    padding: 2rem;
-  }
-  header .boxName .name h1 {
-    font-size: 3rem;
-    font-weight: 400;
-  }
-  header .boxName .name p {
-    margin-top: 1rem;
-    font-size: 1.5rem;
-    font-weight: 400;
-  }
-  header .boxName .name h2 {
-    color: #f3f3f3;
-    font-size: 2.5rem;
-  }
-  header .boxName .name .hi {
-    line-height: 2;
-    font-size: 3rem;
-  }
-  header .boxName .name .hi:hover {
-    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 5px;
-    transition: 0.3s all ease-in-out;
-  }
-  header .boxName .name .lname {
-    line-height: 2;
-    color: #f3f3f3;
-    font-size: 3rem;
-    border: 1.5px solid #f90041;
-  }
-  header .quote {
-    margin: 2rem 0 2rem 3rem;
-    width: 50%;
-    margin-left: 40%;
-  }
-  header .quote p {
-    font-size: 0.7rem;
-  }
-  header .down {
-    margin-top: 1rem;
-  }
-}
-
-.boxServices {
-  background-color: #292c2f;
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
-  height: 50%;
-}
-.boxServices .boxCard {
-  margin: 2rem 2rem 2rem 2rem;
-  width: 20%;
-  height: 60%;
-  text-align: center;
-  color: #f3f3f3;
-  font-family: Montserrat, sans-serif;
-  letter-spacing: normal;
-  line-height: normal;
-  -webkit-font-smoothing: antialiased;
-}
-.boxServices .boxCard h6 {
-  margin: 0.7rem 0 0.7rem 0;
-  font-size: 1.8rem;
-}
-.boxServices .boxCard p {
+.header .boxName .name .hi {
   line-height: 2;
-  text-align: center;
-  font-size: 1rem;
+  font-weight: 0;
+  color: #FD2155;
+  font-size: 4rem;
+  border: 1.5px solid #FD2155;
+  padding: 0.3rem;
+  letter-spacing: 1.5px;
 }
-@media screen and (min-width: 320px) and (max-width: 480px) {
-  .boxServices {
-    display: none;
-  }
+.header .boxName .name .hi:hover {
+  box-shadow: #29154b 0px 0px 0px 10px;
+  transition: 0.4s all ease-in-out;
+  background-color: #dfc22c;
 }
-@media screen and (min-width: 481px) and (max-width: 768px) {
-  .boxServices {
-    display: none;
-  }
+.header .boxName .name h2 {
+  font-size: 3.5rem;
 }
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .boxServices {
-    flex-wrap: nowrap;
-    height: 60%;
-  }
-  .boxServices .boxCard {
+.header .boxName .name h1 {
+  font-size: 3.5rem;
+  padding: 1.5rem 0 1rem 0;
+}
+.header .boxName .name h1 .lname {
+  line-height: 1;
+  font-weight: 500;
+  color: #FD2155;
+  font-size: 4rem;
+  border: 1.5px solid #FD2155;
+  padding: 0.3rem;
+  letter-spacing: 1.5px;
+}
+.header .boxName .name h1 .lname:hover {
+  box-shadow: #29154b 0px 0px 0px 10px;
+  transition: 0.4s all ease-in-out;
+  background-color: #dfc22c;
+}
+.header .boxName .name .avaible {
+  border-radius: 0.2rem;
+  background-color: #23153c;
+  border: 1.5px solid #FD2155;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.3rem;
+  width: 35%;
+  color: #FD2155;
+  letter-spacing: 1.5px;
+  margin: 2rem 0 1rem 0;
+}
+.header .boxName .name .down {
+  display: flex;
+  width: 85vw;
+  justify-content: space-between;
+  position: relative;
+  margin-top: 12%;
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .header .boxName {
     width: 100%;
-    height: 30vh;
-    font-size: 0.6rem;
-    margin: 0.5rem;
-    padding: 1rem;
+    padding: 50% 0 0 0;
   }
-  .boxServices .boxCard h6 {
-    margin: 0.5rem 0 0.5rem 0;
-    font-size: 1rem;
+  .header .boxName .name {
+    width: 100%;
+    padding: 60% 0 0 10%;
+  }
+  .header .boxName .name p {
+    font-size: 1.5rem;
+    margin: 1rem 0 1rem 0;
+  }
+  .header .boxName .name .hi {
+    line-height: 2;
+    font-size: 2.5rem;
+    padding: 0.2rem;
+    letter-spacing: 1px;
+  }
+  .header .boxName .name .hi:hover {
+    box-shadow: #29154b 0px 0px 0px 10px;
+    transition: 0.4s all ease-in-out;
+    background-color: #dfc22c;
+  }
+  .header .boxName .name h2 {
+    font-size: 2.5rem;
+  }
+  .header .boxName .name h1 {
+    font-size: 2.5rem;
+    padding: 1rem 0 1rem 0;
+  }
+  .header .boxName .name h1 .lname {
+    line-height: 1;
+    font-size: 2.5rem;
+    padding: 0.3rem;
+    letter-spacing: 1.5px;
+  }
+  .header .boxName .name h1 .lname:hover {
+    box-shadow: #29154b 0px 0px 0px 10px;
+    transition: 0.4s all ease-in-out;
+    background-color: #dfc22c;
+  }
+  .header .boxName .name .avaible {
+    font-size: 0.8rem;
+    font-weight: 800;
+    padding: 0.5rem;
+    width: 90%;
+    letter-spacing: 1.5px;
+    margin: 0.5rem 0 0 0;
+  }
+  .header .boxName .name .down {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .header .boxName {
+    width: 100%;
+    padding: 50% 0 0 0;
+  }
+  .header .boxName .name {
+    width: 100%;
+    padding: 50% 0 0 10%;
+  }
+  .header .boxName .name p {
+    font-size: 1.5rem;
+    margin: 1rem 0 1rem 0;
+  }
+  .header .boxName .name .hi {
+    line-height: 2;
+    font-size: 2.5rem;
+    padding: 0.2rem;
+    letter-spacing: 1px;
+  }
+  .header .boxName .name .hi:hover {
+    box-shadow: #29154b 0px 0px 0px 10px;
+    transition: 0.4s all ease-in-out;
+    background-color: #dfc22c;
+  }
+  .header .boxName .name h2 {
+    font-size: 2.5rem;
+  }
+  .header .boxName .name h1 {
+    font-size: 2.5rem;
+    padding: 1rem 0 1rem 0;
+  }
+  .header .boxName .name h1 .lname {
+    line-height: 1;
+    font-size: 2.5rem;
+    padding: 0.3rem;
+    letter-spacing: 1.5px;
+  }
+  .header .boxName .name h1 .lname:hover {
+    box-shadow: #29154b 0px 0px 0px 10px;
+    transition: 0.4s all ease-in-out;
+    background-color: #dfc22c;
+  }
+  .header .boxName .name .avaible {
+    font-size: 0.8rem;
+    font-weight: 800;
+    padding: 0.5rem;
+    width: 90%;
+    letter-spacing: 1.5px;
+    margin: 1rem 0 0 0;
+  }
+  .header .boxName .name .down {
+    display: none;
+  }
+}
+@media screen and (min-width: 1380px) and (max-width: 1950px) {
+  .header .boxName {
+    visibility: visible;
+  }
+  .header .boxName .name {
+    width: 100%;
+    padding: 20% 0 5% 10%;
+    color: #cad6dd;
+  }
+  .header .boxName .name p {
+    font-size: 2rem;
+    margin: 1rem 0 1rem 0;
+  }
+  .header .boxName .name .hi {
+    font-size: 4rem;
+  }
+  .header .boxName .name .hi:hover {
+    box-shadow: #29154b 0px 0px 0px 10px;
+    transition: 0.4s all ease-in-out;
+    background-color: #dfc22c;
+  }
+  .header .boxName .name h2 {
+    font-size: 3.5rem;
+  }
+  .header .boxName .name h1 {
+    font-size: 3.5rem;
+  }
+  .header .boxName .name h1 .lname {
+    font-size: 4rem;
+  }
+  .header .boxName .name h1 .lname:hover {
+    box-shadow: #29154b 0px 0px 0px 10px;
+    transition: 0.4s all ease-in-out;
+    background-color: #dfc22c;
+  }
+  .header .boxName .name .avaible {
+    font-size: 0.9rem;
+    width: 30%;
+    letter-spacing: 2px;
+  }
+  .header .boxName .name .down {
+    width: 85vw;
+    position: relative;
+    left: 0%;
   }
 }
 
 .boxAboutMe {
   display: flex;
-  background-color: #1e2225;
 }
 .boxAboutMe .aboutMe {
-  width: 60%;
+  width: 95%;
   height: 100vh;
-  margin: auto;
-  text-align: center;
-  color: #f3f3f3;
-  padding: 8% 0 0 4rem;
+  display: flex;
+  color: #23153c;
 }
-.boxAboutMe .aboutMe h2 {
-  font-size: 3.5rem;
-  color: #00caf4;
-  margin-bottom: 2rem;
-  font-weight: bold;
-  font-family: Montserrat, sans-serif;
-  letter-spacing: normal;
-  line-height: normal;
-  text-align: left;
-  -webkit-font-smoothing: antialiased;
+.boxAboutMe .aboutMe .bitMe {
+  width: 90%;
+  font-size: 2.3rem;
+  font-weight: 200;
+  height: 10%;
+  padding: 2.5rem 0.5rem 0 2rem;
 }
-.boxAboutMe .aboutMe p {
-  padding-bottom: 1rem;
-  font-size: 1.5em;
-  font-family: Montserrat, sans-serif;
-  letter-spacing: normal;
-  line-height: normal;
-  text-align: left;
-  -webkit-font-smoothing: antialiased;
+.boxAboutMe .aboutMe .bitMe .me {
+  color: red;
 }
-.boxAboutMe .aboutMe .spanEng {
-  margin: 2rem 0 0 0;
+.boxAboutMe .aboutMe .description {
+  font-size: 1.1rem;
+  width: 60%;
+  text-align: justify;
+  padding: 5% 0 0 5%;
 }
-.boxAboutMe .aboutMe .spanEng span {
-  font-size: 2.5rem;
-  color: #00caf4;
-  font-weight: 300;
-  letter-spacing: 0.5rem;
-  font-family: Montserrat, sans-serif;
-  letter-spacing: normal;
-}
-.boxAboutMe .aboutMe .spanEng span .down {
-  margin-top: 3rem;
+.boxAboutMe .aboutMe .description p {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 .boxAboutMe .back {
   display: none;
 }
-@media screen and (min-width: 320px) and (max-width: 480px) {
+@media screen and (min-width: 320px) and (max-width: 760px) {
   .boxAboutMe {
-    flex-direction: column;
+    height: 100vh;
   }
   .boxAboutMe .aboutMe {
-    height: 100%;
-    width: 80%;
-    padding: 1rem 0 0 5rem;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    font-weight: bold;
+  }
+  .boxAboutMe .aboutMe .bitMe {
+    width: 90%;
+    font-size: 1.4rem;
+    padding: 5px 5px 1rem 5px;
+    font-weight: bold;
+  }
+  .boxAboutMe .aboutMe .description {
+    margin: 0.5rem 0 1rem 0;
+    font-size: 1.1rem;
+    width: 95%;
     text-align: justify;
+    padding: 1rem 1.5rem 0 1rem;
   }
-  .boxAboutMe .aboutMe h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    font-weight: 600;
-  }
-  .boxAboutMe .aboutMe p {
-    font-size: 0.8rem;
-    padding-bottom: 1.5rem;
-  }
-  .boxAboutMe .aboutMe .spanEng span {
-    font-size: 1rem;
-    font-weight: 700;
-  }
-  .boxAboutMe .aboutMe .spanEng span .down {
-    display: none;
-  }
-  .boxAboutMe .back {
-    display: none;
+  .boxAboutMe .aboutMe .description p {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
   }
 }
-@media screen and (min-width: 481px) and (max-width: 768px) {
-  .boxAboutMe {
+@media screen and (min-width: 768px) and (max-width: 1020px) {
+  .boxAboutMe .aboutMe {
     flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
   }
-  .boxAboutMe .aboutMe {
-    width: 80%;
-    height: 100%;
-    padding: 1rem 0 0 6rem;
-    text-align: justify;
+  .boxAboutMe .aboutMe .bitMe {
+    width: 90%;
+    font-size: 1.5rem;
+    padding: 5px 5px 0 5px;
   }
-  .boxAboutMe .aboutMe h2 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-  }
-  .boxAboutMe .aboutMe p {
-    font-size: 0.8rem;
-    padding-bottom: 1.5rem;
-  }
-  .boxAboutMe .aboutMe .spanEng {
-    margin: 0.5rem 0 0 0;
-  }
-  .boxAboutMe .aboutMe .spanEng span {
-    font-size: 1.6rem;
-  }
-  .boxAboutMe .aboutMe .spanEng span .down {
-    display: none;
-  }
-  .boxAboutMe .back {
-    display: none;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .boxAboutMe .aboutMe {
+  .boxAboutMe .aboutMe .description {
+    font-size: 1.1rem;
     width: 90%;
     text-align: justify;
+    padding: 1% 0 0 1rem;
   }
-  .boxAboutMe .aboutMe h2 {
+  .boxAboutMe .aboutMe .description p {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+}
+@media screen and (min-width: 1380px) and (max-width: 1950px) {
+  .boxAboutMe .aboutMe .bitMe {
     font-size: 3rem;
-    margin-bottom: 1rem;
-    font-weight: 500;
+    font-weight: 300;
   }
-  .boxAboutMe .aboutMe p {
-    font-size: 0.9rem;
-    padding-bottom: 1.5rem;
+  .boxAboutMe .aboutMe .description {
+    font-size: 1.6rem;
+    width: 60%;
+    text-align: justify;
+    padding: 5% 0 0 5%;
   }
-  .boxAboutMe .aboutMe .spanEng {
-    margin: 0.5rem 0 0 0;
-  }
-  .boxAboutMe .aboutMe .spanEng span {
-    font-size: 1.5rem;
-    font-weight: 400;
-  }
-  .boxAboutMe .aboutMe .spanEng span .down {
-    display: none;
-  }
-  .boxAboutMe .back {
-    display: none;
+  .boxAboutMe .aboutMe .description p {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
   }
 }
 
 .boxPorfolio {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   width: 100%;
-  height: 100vh;
-  margin: 1rem auto 2rem auto;
+  padding: 2rem 2rem 0 2rem;
+  margin: auto;
+  background-image: linear-gradient(to top, #dfc22c 5%, #23153c 100%);
 }
 .boxPorfolio h2 {
-  font-size: 4.5rem;
-  color: #00caf4;
+  align-self: center;
+  font-size: 6rem;
+  color: #23153c;
   font-weight: bold;
-  margin-bottom: 2rem;
   font-family: Montserrat, sans-serif;
   letter-spacing: normal;
   line-height: normal;
-  text-align: left;
+  writing-mode: vertical-rl;
+  box-orient: vertical;
+  direction: rtl;
+  transform: rotate(180deg);
   -webkit-font-smoothing: antialiased;
 }
 .boxPorfolio .linkProject {
+  display: grid;
+  gap: 2%;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 40%);
   display: flex;
-  width: 90%;
-  margin: auto;
+  flex-wrap: wrap;
+  height: 100%;
+  margin: 5% 0 5% 10%;
 }
 .boxPorfolio .linkProject .boxProject {
+  margin: 0.1rem;
+  width: 31%;
+  max-height: 40%;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  object-fit: cover;
+  align-items: center;
+  border-radius: 5%;
+  background-color: rgba(35, 21, 60, 0.1);
+  color: #cad6dd;
+  padding: 0 0.5rem 0 0.5rem;
+  font-size: 0.7rem;
+  text-align: center;
+}
+.boxPorfolio .linkProject .boxProject h3 {
+  padding: 5px 0;
 }
 .boxPorfolio .linkProject .boxProject img {
-  width: 80%;
-  height: 100%;
-  border-radius: 5%;
+  width: 90%;
+  height: 60%;
+  padding: 1rem 0 1rem 0;
+  border-radius: 20px;
   opacity: 0.6;
 }
 .boxPorfolio .linkProject .boxProject img:hover {
   opacity: 1;
 }
 .boxPorfolio .linkProject .boxProject .btnAcces {
-  position: relative;
-  bottom: 2rem;
-  left: 3rem;
-  border-radius: 10%;
+  margin: 5% auto 0 auto;
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
 }
 .boxPorfolio .linkProject .boxProject .btnAcces a {
   text-decoration: none;
   text-align: center;
   padding: 0.5rem;
+  width: 25%;
   color: #f3f3f3;
-  box-shadow: rgba(8, 7, 7, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-  background-color: #f90041;
-  border-radius: 5%;
-  margin: 1rem;
 }
 .boxPorfolio .linkProject .boxProject .btnAcces a:hover {
-  background-color: #f3f3f3;
-  color: #00caf4;
-  font-weight: bold;
+  transform: scale(1.5);
+  transition: all 0.5s linear;
 }
-@media screen and (min-width: 320px) and (max-width: 480px) {
+@media screen and (min-width: 320px) and (max-width: 768px) {
   .boxPorfolio {
-    flex-direction: column;
-    padding-top: 1rem;
-    height: 100%;
+    padding: 0;
   }
   .boxPorfolio h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    font-weight: 600;
+    align-self: flex-start;
+    font-size: 4.5rem;
+    letter-spacing: 10px;
+    margin: 50% 0 0 0;
   }
   .boxPorfolio .linkProject {
-    width: 100%;
-    flex-direction: column;
+    margin: 5% 8% 10% 0;
+    gap: 5px;
   }
   .boxPorfolio .linkProject .boxProject {
-    flex-direction: column;
-    width: 70%;
-    margin-left: 25%;
-    object-fit: cover;
-  }
-  .boxPorfolio .linkProject .boxProject img {
-    width: 80%;
-    height: 30%;
-    border-radius: 5%;
-    opacity: 0.6;
-  }
-  .boxPorfolio .linkProject .boxProject img:hover {
-    opacity: 0.9;
-  }
-  .boxPorfolio .linkProject .boxProject .btnAcces {
-    left: 1.5rem;
-    border-radius: 10%;
-  }
-  .boxPorfolio .linkProject .boxProject .btnAcces a {
-    background-color: #f90041;
-    padding: 0.4rem;
-    margin: 0.5rem;
-  }
-}
-@media screen and (min-width: 481px) and (max-width: 768px) {
-  .boxPorfolio {
-    flex-direction: column;
-  }
-  .boxPorfolio h2 {
-    margin: auto;
-    padding: 2rem;
-    font-size: 3rem;
-    font-weight: 500;
-  }
-  .boxPorfolio .linkProject {
-    width: 80%;
-    flex-direction: column;
-  }
-  .boxPorfolio .linkProject .boxProject {
-    flex-direction: column;
-    width: 70%;
-    margin-left: 30%;
-    object-fit: cover;
-  }
-  .boxPorfolio .linkProject .boxProject img {
-    width: 60%;
+    width: 98%;
     height: 20%;
-    border-radius: 5%;
+  }
+  .boxPorfolio .linkProject .boxProject img {
+    width: 100%;
+    height: 50%;
+  }
+  .boxPorfolio .linkProject .boxProject .btnAcces {
+    margin: 10% auto 0 auto;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1020px) {
+  .boxPorfolio {
+    padding: 0;
+  }
+  .boxPorfolio h2 {
+    align-self: flex-start;
+    font-size: 4.5rem;
+    letter-spacing: 10px;
+    margin: 30% 0 0 0;
+  }
+  .boxPorfolio .linkProject {
+    margin: 0 8% 0 0;
+    gap: 5px;
+  }
+  .boxPorfolio .linkProject .boxProject {
+    width: 98%;
+    height: 20%;
+  }
+  .boxPorfolio .linkProject .boxProject img {
+    width: 100%;
+    height: 50%;
+  }
+  .boxPorfolio .linkProject .boxProject .btnAcces {
+    margin: 10% auto 0 auto;
+    justify-content: space-between;
+  }
+}
+@media only screen and (min-width: 1380px) and (max-width: 1950px) {
+  .boxPorfolio h2 {
+    font-size: 8rem;
+  }
+  .boxPorfolio .linkProject .boxProject {
+    margin: 0.3rem;
+    font-size: 1rem;
+    color: #f3f3f3;
+  }
+  .boxPorfolio .linkProject .boxProject h3 {
+    padding: 5px 0;
+  }
+  .boxPorfolio .linkProject .boxProject img {
+    border-radius: 1rem;
     opacity: 0.6;
   }
   .boxPorfolio .linkProject .boxProject img:hover {
-    opacity: 0.9;
-  }
-  .boxPorfolio .linkProject .boxProject .btnAcces {
-    position: relative;
-    bottom: 3rem;
-    left: 1.5rem;
+    opacity: 1;
   }
   .boxPorfolio .linkProject .boxProject .btnAcces a {
-    background-color: #f90041;
-    text-decoration: none;
-    text-align: center;
-    padding: 0.6rem;
-    margin: 0.5rem;
+    padding: 1rem;
+    width: 30%;
   }
-}
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .boxPorfolio {
-    background-color: rgb(31, 39, 43);
-    flex-direction: column;
-  }
-  .boxPorfolio .cardProject {
-    width: 60%;
-    height: 40%;
-    margin-left: 4rem;
-  }
-  .boxPorfolio .cardProject img {
-    margin: 2rem;
-    width: 80%;
-  }
-  .boxPorfolio h2 {
-    margin: auto;
-    padding: 2rem;
-    font-size: 3rem;
-    font-weight: 500;
+  .boxPorfolio .linkProject .boxProject .btnAcces a:hover {
+    transform: scale(1.5);
+    transition: all 0.5s linear;
   }
 }
 
 .boxSkill {
-  background-color: #1e2225;
-  height: 100vh;
+  background-color: #dfc22c;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: column;
+  height: 60vh;
+  overflow: hidden;
 }
 .boxSkill .aboutSkill {
-  width: 40%;
-  height: 100%;
-  color: #f3f3f3;
-  padding: 2rem 6rem 0 0;
-  text-align: justify;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
 }
-.boxSkill .aboutSkill h2 {
-  font-size: 3.5rem;
-  color: #00caf4;
-  margin-bottom: 1rem;
+.boxSkill .aboutSkill h3 {
+  font-size: 4rem;
+  font-weight: 650;
+  width: 35%;
+  padding: 0 0 0 1rem;
+  color: #23153c;
   font-weight: bold;
   font-family: Montserrat, sans-serif;
-}
-.boxSkill .aboutSkill p {
-  padding-bottom: 1.5rem;
-  font-size: 1.5em;
-  font-family: Montserrat, sans-serif;
-  letter-spacing: normal;
   line-height: normal;
+  letter-spacing: 1.5px;
   -webkit-font-smoothing: antialiased;
+}
+.boxSkill .aboutSkill h2 {
+  font-size: 4rem;
+  font-weight: 650;
+  letter-spacing: 5px;
+  -webkit-text-stroke: 2px #23153c;
+  color: transparent;
 }
 .boxSkill .tegnology {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0;
-  justify-content: center;
-  align-items: center;
-  width: 60%;
-  height: 100%;
+  height: 40%;
+  margin: 5% 0 0 0;
 }
 .boxSkill .tegnology .skill {
-  color: #f3f3f3;
+  margin: 0 10rem 0 10rem;
   text-align: center;
-  width: 30%;
 }
 .boxSkill .tegnology .skill h5 {
-  font-size: 0.8rem;
-  padding: 0.5rem;
+  font-weight: bold;
 }
-.boxSkill .lastDown {
-  margin-top: 8rem;
-}
-@media screen and (min-width: 320px) and (max-width: 480px) {
+@media only screen and (min-width: 320px) and (max-width: 760px) {
   .boxSkill {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
   }
   .boxSkill .aboutSkill {
-    width: 90%;
-    padding: 1rem 0 0 5rem;
-    text-align: justify;
-    height: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  .boxSkill .aboutSkill h3 {
+    font-size: 3.5rem;
   }
   .boxSkill .aboutSkill h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    font-weight: 600;
-  }
-  .boxSkill .aboutSkill p {
-    font-size: 0.8rem;
-    padding-bottom: 1.5rem;
-  }
-  .boxSkill .aboutSkill .back {
     display: none;
   }
-  .boxSkill .lastDown {
-    display: none;
+  .boxSkill .tegnology .skill {
+    margin: 0 10rem 0 5px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1020px) {
+  .boxSkill {
+    justify-content: space-between;
+    overflow: hidden;
+  }
+  .boxSkill .aboutSkill h3 {
+    font-size: 3.5rem;
   }
   .boxSkill .tegnology {
-    justify-content: flex-end;
-    width: 80%;
-    height: 100%;
-    color: #f3f3f3;
+    width: 100%;
+    white-space: nowrap;
+  }
+  .boxSkill .tegnology .skill {
+    margin: 0 10rem 0 5px;
+  }
+}
+@media only screen and (min-width: 1380px) and (max-width: 1950px) {
+  .boxSkill {
+    overflow: hidden;
+    height: 45vh;
+  }
+  .boxSkill .aboutSkill {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 0 0 0 5rem;
+  }
+  .boxSkill .aboutSkill h3 {
+    font-size: 4.5rem;
+  }
+  .boxSkill .aboutSkill h2 {
+    font-size: 4.5rem;
+  }
+  .boxSkill .tegnology {
+    display: flex;
+    height: 40%;
+    margin: 5% 0 0 0;
+  }
+  .boxSkill .tegnology .skill {
+    margin: 0 10rem 0 10rem;
     text-align: center;
-    margin: 1rem 0 2rem 1.5rem;
-  }
-  .boxSkill .tegnology .skill {
-    width: 30%;
-    height: 15vh;
-    margin: 0.5rem 0.5rem 1rem 0.5rem;
   }
   .boxSkill .tegnology .skill h5 {
-    font-size: 0.6rem;
-  }
-}
-@media screen and (min-width: 481px) and (max-width: 768px) {
-  .boxSkill {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-  .boxSkill .aboutSkill {
-    width: 90%;
-    padding: 1rem 0 0 6rem;
-    text-align: justify;
-  }
-  .boxSkill .aboutSkill h2 {
-    font-size: 2.3rem;
-    margin-bottom: 1rem;
-    font-weight: 600;
-  }
-  .boxSkill .aboutSkill p {
-    font-size: 0.8rem;
-    padding-bottom: 1.5rem;
-  }
-  .boxSkill .aboutSkill .back {
-    display: none;
-  }
-  .boxSkill .lastDown {
-    display: none;
-  }
-  .boxSkill .tegnology {
-    margin-left: 15%;
-    width: 80%;
-    min-height: 50vh;
-    color: #f3f3f3;
-  }
-  .boxSkill .tegnology .skill {
-    width: 20%;
-    margin: 1rem 0.5rem 4rem 0.5rem;
-    padding-top: 0.6rem;
-  }
-  .boxSkill .tegnology .skill h5 {
-    font-size: 0.8rem;
-  }
-  .boxSkill .lastDown {
-    display: none;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .boxSkill {
-    height: 100%;
-    display: flex;
-  }
-  .boxSkill .aboutSkill {
-    width: 60%;
-    padding: 2rem;
-    text-align: justify;
-  }
-  .boxSkill .aboutSkill h2 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    font-weight: 500;
-  }
-  .boxSkill .aboutSkill p {
-    font-size: 0.8rem;
-    padding-bottom: 1.8rem;
-  }
-  .boxSkill .aboutSkill .back {
-    display: none;
-  }
-  .boxSkill .tegnology {
-    justify-content: center;
-  }
-  .boxSkill .tegnology .skill {
-    height: 20vh;
-    padding-top: 1.5rem;
-  }
-  .boxSkill .tegnology .skill h5 {
-    font-size: 0.8rem;
-  }
-  .boxSkill .lastDown {
-    display: none;
+    font-weight: bold;
   }
 }
 
 .boxContact {
-  background-color: #1e2225;
+  background-image: linear-gradient(to top, #23153c 30%, #dfc22c 100%);
   height: 100vh;
   display: flex;
 }
 .boxContact .aboutContact {
+  display: flex;
   width: 50%;
-  height: 100%;
-  color: #f3f3f3;
-  padding: 4rem;
+  color: #cad6dd;
+  padding: 0 0 0 4rem;
   text-align: justify;
 }
 .boxContact .aboutContact h2 {
-  font-size: 4.5rem;
-  color: #00caf4;
-  margin-bottom: 1rem;
+  font-size: 3.5rem;
+  color: #23153c;
   font-weight: bold;
   font-family: Montserrat, sans-serif;
   letter-spacing: normal;
   line-height: normal;
-  text-align: left;
+  writing-mode: vertical-rl;
+  box-orient: vertical;
+  direction: rtl;
+  transform: rotate(180deg);
+  margin: 10% 0 0 0;
   -webkit-font-smoothing: antialiased;
 }
-.boxContact .aboutContact p {
-  padding-bottom: 1.5rem;
-  width: 80%;
-  font-size: 0.9em;
-}
-.boxContact .aboutContact button {
-  border: 1px solid #00caf4;
-  margin: 1.5rem 0 0 0;
-  border-radius: 5%;
-  color: #00caf4;
-  width: 40%;
-}
-.boxContact .aboutContact button:hover {
-  background-color: #00caf4;
-  color: #f3f3f3;
-}
-.boxContact .aboutContact .textarea {
-  height: 20vh;
-}
-.boxContact .boxlocation {
+.boxContact .aboutContact .mail {
+  padding: 0 0 0 20%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  align-items: center;
-  min-width: 50%;
-  font-size: 0.9em;
-  height: 80%;
-  margin: auto;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  color: #f3f3f3;
-  opacity: 0.7;
 }
-.boxContact .boxlocation .map {
-  border-radius: 5%;
+.boxContact .aboutContact .mail p {
+  font-size: 1.6rem;
+  color: #cad6dd;
 }
-@media screen and (min-width: 320px) and (max-width: 480px) {
+.boxContact .aboutContact .mail button {
+  background-color: #cad6dd;
+  padding: 0.8rem;
+  border-radius: 30px;
+  width: 50%;
+}
+.boxContact .aboutContact .mail button:hover {
+  box-shadow: #29154b 0px 0px 0px 10px;
+  transition: 0.4s all ease-in-out;
+  background-color: #dfc22c;
+}
+.boxContact .aboutContact .mail button a {
+  text-decoration: none;
+  color: #23153c;
+  font-size: 1.4rem;
+}
+.boxContact aside {
+  width: 50%;
+}
+.boxContact aside .socialMedia {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  left: 85%;
+  width: 15%;
+  height: 50%;
+  top: 40%;
+}
+.boxContact aside .socialMedia li {
+  list-style: none;
+}
+.boxContact aside .socialMedia li a {
+  text-decoration: none;
+}
+@media screen and (min-width: 320px) and (max-width: 760px) {
   .boxContact {
-    height: 100%;
-    display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    height: 100vh;
   }
   .boxContact .aboutContact {
-    width: 90%;
-    padding: 1rem 0 0 5rem;
-    text-align: justify;
-  }
-  .boxContact .aboutContact h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    font-weight: 600;
-  }
-  .boxContact .aboutContact p {
-    font-size: 0.8rem;
-    padding-bottom: 1.5rem;
-  }
-  .boxContact .boxlocation {
-    width: 90%;
-    min-height: 50vh;
-    margin: 2rem auto 1rem auto;
-    padding: 0.5rem;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  }
-  .boxContact .boxlocation p {
-    font-size: 0.6rem;
-  }
-  .boxContact .boxlocation .map {
-    width: 80%;
-    height: 100%;
-  }
-}
-@media screen and (min-width: 481px) and (max-width: 768px) {
-  .boxContact {
-    height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-  }
-  .boxContact .aboutContact {
-    width: 90%;
-    padding: 1rem 0 0 5rem;
-  }
-  .boxContact .aboutContact h2 {
-    font-size: 2.3rem;
-    margin-bottom: 1rem;
-    font-weight: 600;
-  }
-  .boxContact .aboutContact p {
-    font-size: 0.8rem;
-    padding-bottom: 1.5rem;
-  }
-  .boxContact .boxlocation {
     width: 100%;
-    min-height: 50vh;
-    margin: auto;
-    padding: 1rem;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  }
-  .boxContact .boxlocation p {
-    font-size: 0.6rem;
-  }
-  .boxContact .boxlocation .map {
-    width: 80%;
-    height: 100%;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .boxContact {
-    height: 90%;
-  }
-  .boxContact .aboutContact {
-    width: 50%;
-    padding: 1rem 0 0 2rem;
-    text-align: justify;
+    text-align: center;
   }
   .boxContact .aboutContact h2 {
     font-size: 3rem;
-    margin-bottom: 1rem;
-    font-weight: 500;
+    letter-spacing: normal;
+    line-height: normal;
+    writing-mode: horizontal-tb;
+    direction: ltr;
+    transform: rotate(0deg);
+    padding: 0 20% 0 0;
+    -webkit-font-smoothing: antialiased;
   }
-  .boxContact .aboutContact p {
-    font-size: 0.8rem;
-    padding-bottom: 1.5rem;
-  }
-  .boxContact .boxlocation {
-    width: 50%;
-    min-height: 60vh;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  }
-  .boxContact .boxlocation p {
-    font-size: 0.8rem;
-  }
-  .boxContact .boxlocation .map {
+  .boxContact .aboutContact .mail {
+    padding: 20% 3% 0 0;
     width: 80%;
-    height: 100%;
+    align-items: center;
+  }
+  .boxContact .aboutContact .mail p {
+    font-size: 1.5rem;
+  }
+  .boxContact .aboutContact .mail button {
+    padding: 0.8rem;
+    border-radius: 30px;
+    margin: 50% 0 0 0;
+    width: 80%;
+  }
+  .boxContact .aboutContact .mail button a {
+    text-decoration: none;
+    color: #23153c;
+    font-size: 1.5rem;
+  }
+  .boxContact aside {
+    width: 100%;
+    padding: 0 1rem 0 1rem;
+  }
+  .boxContact aside .socialMedia {
+    flex-direction: row;
+    position: static;
+    width: 100%;
+    padding: 2rem;
+  }
+  .boxContact aside .socialMedia li {
+    list-style: none;
+  }
+  .boxContact aside .socialMedia li a {
+    text-decoration: none;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1020px) {
+  .boxContact {
+    flex-direction: column;
+  }
+  .boxContact .aboutContact h2 {
+    font-size: 3rem;
+    letter-spacing: normal;
+    line-height: normal;
+    writing-mode: horizontal-tb;
+    direction: ltr;
+    transform: rotate(0deg);
+    -webkit-font-smoothing: antialiased;
+  }
+  .boxContact aside {
+    width: 100%;
+  }
+  .boxContact aside .socialMedia {
+    flex-direction: row;
+    position: static;
+    width: 100%;
+    padding: 1rem;
+  }
+  .boxContact aside .socialMedia li {
+    list-style: none;
+  }
+  .boxContact aside .socialMedia li a {
+    text-decoration: none;
+  }
+}
+@media screen and (min-width: 1380px) and (max-width: 1950px) {
+  .boxContact .aboutContact h2 {
+    font-size: 4.5rem;
+  }
+  .boxContact .aboutContact .mail {
+    padding: 0 0 0 20%;
+    height: 80%;
+  }
+  .boxContact .aboutContact .mail p {
+    font-size: 1.8rem;
+    color: #f3f3f3;
+  }
+  .boxContact .aboutContact .mail button {
+    width: 40%;
+  }
+  .boxContact .aboutContact .mail button:hover {
+    box-shadow: #3d2169 0px 0px 0px 5px;
+    transition: 0.4s all ease-in-out;
+    background-color: #dfc22c;
+  }
+  .boxContact .aboutContact .mail button a {
+    text-decoration: none;
+    color: #23153c;
+    font-size: 1.4rem;
+  }
+  .boxContact aside {
+    width: 50%;
+  }
+  .boxContact aside .socialMedia {
+    height: 40%;
+    top: 15%;
+  }
+  .boxContact aside .socialMedia li {
+    list-style: none;
+  }
+  .boxContact aside .socialMedia li a {
+    text-decoration: none;
   }
 }
 
 footer {
-  background-color: #1d242e;
-  height: 10vh;
+  background-color: #23153c;
   color: #f3f3f3;
   text-align: center;
   font-size: 0.8rem;
-  padding: 4rem;
 }
-@media screen and (min-width: 320px) and (max-width: 480px) {
+@media screen and (min-width: 320px) and (max-width: 760px) {
   footer {
     height: 10vh;
   }
 }
-@media screen and (min-width: 481px) and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1020px) {
   footer {
     height: 10vh;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  footer {
-    height: 10vh;
+.menu {
+  background-color: rgba(35, 21, 60, 0.8);
+  border-radius: 4px;
+  padding: 0.3rem;
+  position: fixed;
+  left: 96%;
+  top: 3%;
+  z-index: 999;
+  cursor: pointer;
+}
+@media all and (min-width: 320px) and (max-width: 760px) {
+  .menu {
+    left: 90%;
+    top: 1%;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 1020px) {
+  .menu {
+    left: 90%;
+    top: 1%;
+  }
+}
+@media all and (min-width: 1380px) and (max-width: 1950px) {
+  .menu {
+    left: 98%;
+    top: 1.5rem;
+  }
+}
+
+.active {
+  clip-path: circle(100% at 5% 90%);
+}
+@media all and (min-width: 20rem) and (max-width: 30rem) {
+  .active {
+    clip-path: circle(70% at 0% 30%);
+  }
+}
+@media all and (min-width: 30rem) and (max-width: 48rem) {
+  .active {
+    clip-path: circle(90% at 0% 50%);
+  }
+}
+@media all and (min-width: 48rem) and (max-width: 60rem) {
+  .active {
+    clip-path: circle(90% at 20% 50%);
   }
 }
 
