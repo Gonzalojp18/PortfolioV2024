@@ -355,16 +355,16 @@ body {
   }
   .boxAboutMe .aboutMe .bitMe {
     width: 90%;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     padding: 5px 5px 1rem 5px;
     font-weight: bold;
   }
   .boxAboutMe .aboutMe .description {
-    margin: 0.5rem 0 1rem 0;
-    font-size: 1.1rem;
+    margin: 1rem 0 1rem 0;
+    font-size: 0.8rem;
     width: 95%;
     text-align: justify;
-    padding: 1rem 1.5rem 0 1rem;
+    padding: 3% 1.5rem 0 1rem;
   }
   .boxAboutMe .aboutMe .description p {
     opacity: 0;
