@@ -583,6 +583,7 @@ body {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-around;
+  padding: 1.5rem 0 0 0;
 }
 .boxSkill .aboutSkill h3 {
   font-size: 4rem;
@@ -625,7 +626,7 @@ body {
     justify-content: flex-start;
   }
   .boxSkill .aboutSkill h3 {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
   }
   .boxSkill .aboutSkill h2 {
     display: none;
@@ -941,6 +942,93 @@ footer {
 @media all and (min-width: 48rem) and (max-width: 60rem) {
   .active {
     clip-path: circle(90% at 20% 50%);
+  }
+}
+
+.nextProyect {
+  padding: 5% 0;
+}
+.nextProyect h2 {
+  font-size: 4rem;
+  font-weight: 650;
+  letter-spacing: 5px;
+  -webkit-text-stroke: 2px #eca604;
+  color: transparent;
+}
+.nextProyect .developing {
+  width: 100%;
+  justify-content: center;
+}
+.nextProyect .developing .boxProject {
+  margin: 0.1rem;
+  width: 30%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5%;
+  color: #cad6dd;
+  padding: 0 0.5rem 0 0.5rem;
+  font-size: 0.7rem;
+  text-align: center;
+}
+.nextProyect .developing .boxProject h3 {
+  padding: 5px 0;
+}
+.nextProyect .developing .boxProject img {
+  width: 60%;
+  height: 20%;
+  padding: 1rem 0 1rem 0;
+  border-radius: 20px;
+  opacity: 0.6;
+}
+.nextProyect .developing .boxProject img:hover {
+  opacity: 1;
+}
+.nextProyect .developing .boxProject .btnAcces {
+  margin: 5% auto 0 auto;
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.nextProyect .developing .boxProject .btnAcces a {
+  text-decoration: none;
+  text-align: center;
+  padding: 0.5rem;
+  width: 25%;
+  color: #f3f3f3;
+}
+.nextProyect .developing .boxProject .btnAcces a:hover {
+  transform: scale(1.5);
+  transition: all 0.5s linear;
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .nextProyect {
+    padding: 5% 5%;
+  }
+  .nextProyect h2 {
+    font-size: 3rem;
+    font-weight: 650;
+    letter-spacing: 5px;
+    -webkit-text-stroke: 1px #eca604;
+    color: transparent;
+  }
+  .nextProyect .developing {
+    width: 100%;
+    height: 20%;
+    flex-direction: column;
+  }
+  .nextProyect .developing .boxProject {
+    width: 98%;
+    height: 20%;
+  }
+  .nextProyect .developing .boxProject img {
+    width: 60%;
+    height: 10%;
+  }
+  .nextProyect .developing .boxProject .btnAcces {
+    margin: 10% auto 0 auto;
+    justify-content: center;
   }
 }
 
