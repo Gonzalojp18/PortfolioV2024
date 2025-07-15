@@ -28,3 +28,17 @@ VANTA.GLOBE({
 //   backgroundColor: 0xdfc22c,
 // })
 
+
+VANTA.NET({
+    el: ".boxAboutMe",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    scale: 1.00,
+    scaleMobile: 1.00,
+    points: 7.00,
+    maxDistance: 24.00,
+    spacing: 17.00
+  })

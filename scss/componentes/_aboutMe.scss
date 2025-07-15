@@ -1,107 +1,127 @@
-.boxAboutMe{
+.boxAboutMe {
     display: flex;
-    .aboutMe{
-        width:95%;
-        height: 100vh;
+    justify-content: center; // Centra el contenido horizontalmente
+    align-items: center; // Centra el contenido verticalmente
+    min-height: 100vh; // Asegura que la sección ocupe al menos todo el viewport
+    background-color: #23153c; // Color de fondo más oscuro para un look futurista
+    color: #f0f0f0; // Color de texto claro para contraste
+    overflow: hidden; // Previene scrollbars por animaciones fuera de vista
+
+    .aboutMeContent {
+        width: 90%; // Ocupa un buen porcentaje del ancho
+        max-width: 1200px; // Limita el ancho en pantallas muy grandes
         display: flex;
-        color: #23153c;
-        .bitMe {
-            width: 90%;
-            font-size: 2.3rem;
-            font-weight: 200;
-            height: 10%;
-            padding: 2.5rem .5rem 0 2rem;
-            .me{
-                color: red;
-            }
-        }
-        .description {
-            font-size: 1.1rem;
-            width: 60%;
-            text-align: justify;
-            padding: 5% 0 0 5%;
-            p {
-                opacity: 0;
-                transform: translateY(50px);
-                transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-            }
-        }
-    }
-    .back{
-        display: none;
-    }
+        flex-direction: column; // Por defecto en columna para un flujo más natural
+        align-items: center; // Centra los elementos hijos (bitMe, description)
+        padding: 4rem 0; // Padding superior e inferior
 
-
-@media screen and (min-width: 320px) and (max-width: 760px) {
-    height: 100vh;
-    .aboutMe{
-        flex-direction: column;
-        justify-content: space-around;
-        width: 100%;
-        font-weight: bold;
         .bitMe {
-            width: 90%;
-            font-size: 1.4rem;
-            padding: 5px 5px 1rem 5px;
-            font-weight: bold;
-        }
-        .description {
-            margin: 1rem 0 1rem 0;
-            font-size: .9rem;
-            width: 95%;
-            text-align: justify;
-            padding: 3% 1.5rem 0 1rem;
-            p {
-                opacity: 0;
-                transform: translateY(50px);
-                transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-            }
-        }
-    }
-}
-@media screen and (min-width: 768px) and (max-width: 1020px) {
-    .aboutMe{
-        flex-direction: column;
-        justify-content: space-around;
-        width: 100%;
-        .bitMe {
-            width: 90%;
-            font-size: 1.5rem;
-            padding: 5px 5px 0 5px;
-        }
-        .description {
-            font-size: 1.1rem;
-            width: 90%;
-            text-align: justify;
-            padding: 1% 0 0 1rem;
-            p {
-                opacity: 0;
-                transform: translateY(50px);
-                transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 1380px) and (max-width: 1950px) {
-    .aboutMe{
-        .bitMe {
-            font-size: 3rem;
+            width: 80%; // Un poco más estrecho para el texto principal
+            max-width: 800px;
+            font-size: clamp(1rem, 4vw, 3rem); // Fuente responsiva
             font-weight: 300;
-        }
-        .description {
-            font-size: 1.6rem;
-            width: 60%;
-            text-align: justify;
-            padding: 5% 0 0 5%;
+            text-align: center; // Centra el texto
+            margin-bottom: 3rem; // Espacio entre el título y la descripción
+            line-height: 1.2;
+
             p {
-                opacity: 0;
-                transform: translateY(50px);
-                transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+                opacity: 0; // Ocultamos para animar con GSAP
+                transform: translateY(20px); // Empezamos ligeramente desplazado
+            }
+
+            .me {
+                color: #f90041; // Tu color rojo original
+                font-weight: 600; // Más negrita para destacar
+                display: inline-block; // Necesario para la animación de escala
+                // Inicialmente en el JS le daremos scale, aquí no es necesario
+            }
+        }
+
+        .description {
+            width: 85%; // Ocupa un buen ancho
+            max-width: 900px;
+            font-size: clamp(1rem, 2vw, 1.25rem); // Fuente responsiva
+            text-align: justify;
+            line-height: 1.2;
+            color: #ccc; // Color ligeramente más tenue para el cuerpo del texto
+
+            p {
+                opacity: 0; // Ocultamos para animar con GSAP
+                transform: translateY(30px); // Desplazamiento inicial
+                margin-bottom: 1.5rem; // Espacio entre párrafos
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
             }
         }
     }
 
-}
+    // Media Queries
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+        .aboutMeContent {
+            padding: 2rem 0;
 
+            .bitMe {
+                width: 90%;
+                font-size: clamp(1.2rem, 5vw, 2rem);
+                margin-bottom: 2rem;
+            }
+
+            .description {
+                width: 90%;
+                font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+                padding: 0 1rem;
+            }
+        }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        .aboutMeContent {
+            .bitMe {
+                width: 85%;
+                font-size: clamp(1.5rem, 4.5vw, 2.8rem);
+            }
+
+            .description {
+                width: 85%;
+                font-size: clamp(1rem, 2.2vw, 1.15rem);
+            }
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        .aboutMeContent {
+            flex-direction: row; // Para desktop, los colocamos lado a lado
+            justify-content: center;
+            align-items: flex-start; // Alineamos al inicio para que el texto fluya
+
+            .bitMe {
+                width: 40%; // Ocupa un porcentaje del ancho en desktop
+                text-align: left; // Alinea a la izquierda para un layout de dos columnas
+                padding-right: 2rem; // Espacio entre secciones
+                margin-bottom: 0; // Elimina el margen inferior
+            }
+
+            .description {
+                width: 55%; // Ocupa el resto del ancho
+                padding-left: 2rem; // Espacio entre secciones
+            }
+        }
+    }
+
+    // Pseudo-elemento para un efecto de fondo "futurista" (opcional)
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle at top left, rgba(249, 0, 65, 0.1), transparent 50%),
+                    radial-gradient(circle at bottom right, rgba(0, 202, 244, 0.1), transparent 50%);
+        mix-blend-mode: overlay; // Mezcla los colores de forma interesante
+        z-index: -1; // Detrás del contenido
+        opacity: 0.8;
+    }
 }

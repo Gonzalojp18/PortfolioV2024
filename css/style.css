@@ -312,105 +312,108 @@ body {
 
 .boxAboutMe {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #23153c;
+  color: #f0f0f0;
+  overflow: hidden;
 }
-.boxAboutMe .aboutMe {
-  width: 95%;
-  height: 100vh;
-  display: flex;
-  color: #23153c;
-}
-.boxAboutMe .aboutMe .bitMe {
+.boxAboutMe .aboutMeContent {
   width: 90%;
-  font-size: 2.3rem;
-  font-weight: 200;
-  height: 10%;
-  padding: 2.5rem 0.5rem 0 2rem;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 0;
 }
-.boxAboutMe .aboutMe .bitMe .me {
-  color: red;
+.boxAboutMe .aboutMeContent .bitMe {
+  width: 80%;
+  max-width: 800px;
+  font-size: clamp(1rem, 4vw, 3rem);
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 3rem;
+  line-height: 1.2;
 }
-.boxAboutMe .aboutMe .description {
-  font-size: 1.1rem;
-  width: 60%;
-  text-align: justify;
-  padding: 5% 0 0 5%;
-}
-.boxAboutMe .aboutMe .description p {
+.boxAboutMe .aboutMeContent .bitMe p {
   opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  transform: translateY(20px);
 }
-.boxAboutMe .back {
-  display: none;
+.boxAboutMe .aboutMeContent .bitMe .me {
+  color: #f90041;
+  font-weight: 600;
+  display: inline-block;
 }
-@media screen and (min-width: 320px) and (max-width: 760px) {
-  .boxAboutMe {
-    height: 100vh;
+.boxAboutMe .aboutMeContent .description {
+  width: 85%;
+  max-width: 900px;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  text-align: justify;
+  line-height: 1.2;
+  color: #ccc;
+}
+.boxAboutMe .aboutMeContent .description p {
+  opacity: 0;
+  transform: translateY(30px);
+  margin-bottom: 1.5rem;
+}
+.boxAboutMe .aboutMeContent .description p:last-of-type {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .boxAboutMe .aboutMeContent {
+    padding: 2rem 0;
   }
-  .boxAboutMe .aboutMe {
-    flex-direction: column;
-    justify-content: space-around;
-    width: 100%;
-    font-weight: bold;
-  }
-  .boxAboutMe .aboutMe .bitMe {
+  .boxAboutMe .aboutMeContent .bitMe {
     width: 90%;
-    font-size: 1.4rem;
-    padding: 5px 5px 1rem 5px;
-    font-weight: bold;
+    font-size: clamp(1.2rem, 5vw, 2rem);
+    margin-bottom: 2rem;
   }
-  .boxAboutMe .aboutMe .description {
-    margin: 1rem 0 1rem 0;
-    font-size: 0.9rem;
-    width: 95%;
-    text-align: justify;
-    padding: 3% 1.5rem 0 1rem;
-  }
-  .boxAboutMe .aboutMe .description p {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  .boxAboutMe .aboutMeContent .description {
+    width: 90%;
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    padding: 0 1rem;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1020px) {
-  .boxAboutMe .aboutMe {
-    flex-direction: column;
-    justify-content: space-around;
-    width: 100%;
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .boxAboutMe .aboutMeContent .bitMe {
+    width: 85%;
+    font-size: clamp(1.5rem, 4.5vw, 2.8rem);
   }
-  .boxAboutMe .aboutMe .bitMe {
-    width: 90%;
-    font-size: 1.5rem;
-    padding: 5px 5px 0 5px;
-  }
-  .boxAboutMe .aboutMe .description {
-    font-size: 1.1rem;
-    width: 90%;
-    text-align: justify;
-    padding: 1% 0 0 1rem;
-  }
-  .boxAboutMe .aboutMe .description p {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  .boxAboutMe .aboutMeContent .description {
+    width: 85%;
+    font-size: clamp(1rem, 2.2vw, 1.15rem);
   }
 }
-@media screen and (min-width: 1380px) and (max-width: 1950px) {
-  .boxAboutMe .aboutMe .bitMe {
-    font-size: 3rem;
-    font-weight: 300;
+@media screen and (min-width: 1024px) {
+  .boxAboutMe .aboutMeContent {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
   }
-  .boxAboutMe .aboutMe .description {
-    font-size: 1.6rem;
-    width: 60%;
-    text-align: justify;
-    padding: 5% 0 0 5%;
+  .boxAboutMe .aboutMeContent .bitMe {
+    width: 40%;
+    text-align: left;
+    padding-right: 2rem;
+    margin-bottom: 0;
   }
-  .boxAboutMe .aboutMe .description p {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  .boxAboutMe .aboutMeContent .description {
+    width: 55%;
+    padding-left: 2rem;
   }
+}
+.boxAboutMe::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top left, rgba(249, 0, 65, 0.1), transparent 50%), radial-gradient(circle at bottom right, rgba(0, 202, 244, 0.1), transparent 50%);
+  mix-blend-mode: overlay;
+  z-index: -1;
+  opacity: 0.8;
 }
 
 .boxPorfolio {
