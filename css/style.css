@@ -158,7 +158,7 @@ body {
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .header .boxName {
     width: 100%;
-    padding: 50% 0 0 0;
+    padding: 30% 0 0 0;
   }
   .header .boxName .name {
     width: 100%;
@@ -352,6 +352,7 @@ body {
   text-align: justify;
   line-height: 1.2;
   color: #ccc;
+  background-color: #23153c;
 }
 .boxAboutMe .aboutMeContent .description p {
   opacity: 0;
@@ -456,7 +457,7 @@ body {
   flex-direction: column;
   align-items: center;
   border-radius: 5%;
-  background-color: rgba(35, 21, 60, 0.1);
+  background-color: rgba(38, 21, 66, 0.2);
   color: #cad6dd;
   padding: 0 0.5rem 0 0.5rem;
   font-size: 0.7rem;
@@ -850,8 +851,9 @@ body {
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1020px) {
-  .boxContact {
+  .boxContact .aboutContact {
     flex-direction: column;
+    justify-content: space-around;
   }
   .boxContact .aboutContact h2 {
     font-size: 3rem;
@@ -862,19 +864,23 @@ body {
     transform: rotate(0deg);
     -webkit-font-smoothing: antialiased;
   }
-  .boxContact aside {
-    width: 100%;
+  .boxContact .aboutContact .mail p {
+    margin: 0 0 2rem 0;
   }
-  .boxContact aside .socialMedia {
+  .boxContact .aboutContact .mail button {
+    width: 100%;
+    padding: 5px;
+  }
+  .boxContact .socialMedia {
     flex-direction: row;
     position: static;
     width: 100%;
-    padding: 1rem;
+    padding: 0 1rem 0 0;
   }
-  .boxContact aside .socialMedia li {
+  .boxContact .socialMedia li {
     list-style: none;
   }
-  .boxContact aside .socialMedia li a {
+  .boxContact .socialMedia li a {
     text-decoration: none;
   }
 }

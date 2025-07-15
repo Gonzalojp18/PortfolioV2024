@@ -129,8 +129,9 @@
 
 
 @media screen and (min-width: 768px) and (max-width: 1020px) {
-    flex-direction: column;
     .aboutContact{
+        flex-direction: column;
+        justify-content: space-around;
         h2{
             font-size: 3rem;
             letter-spacing: normal;
@@ -138,23 +139,30 @@
             writing-mode: horizontal-tb;
             direction: ltr;
             transform: rotate(0deg);
-        -webkit-font-smoothing: antialiased;
+            -webkit-font-smoothing: antialiased;
+
+        }
+        .mail{
+            p{
+                margin: 0 0 2rem 0;
+            }
+            button{
+                width: 100%;
+                padding: 5px;
+            }
         }
     }
-    aside{
-        width: 100%;
         .socialMedia{
             flex-direction: row;
             position: static;
             width: 100%;
-            padding: 1rem;
+            padding: 0 1rem 0 0;
             li{
                 list-style: none;
                 a{
                     text-decoration: none;
                 }
             }
-        }
     }
 
 }
