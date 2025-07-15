@@ -466,7 +466,7 @@ body {
   width: 90%;
   height: 60%;
   padding: 1rem 0 1rem 0;
-  border-radius: 20px;
+  border-radius: 16px;
   opacity: 0.6;
 }
 .boxPorfolio .linkProject .boxProject img:hover {
@@ -954,6 +954,7 @@ footer {
   letter-spacing: 5px;
   -webkit-text-stroke: 2px #eca604;
   color: transparent;
+  padding: 0 0 0 2rem;
 }
 .nextProyect .developing {
   width: 100%;

@@ -1,0 +1,30 @@
+.menu {
+  background-color: rgba(35, 21, 60, 0.8);
+  border-radius: 4px;
+  padding: 0.3rem;
+  position: fixed;
+  left: 96%;
+  top: 3%;
+  z-index: 999;
+  cursor: pointer;
+}
+@media all and (min-width: 320px) and (max-width: 760px) {
+  .menu {
+    left: 90%;
+    top: 1%;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 1020px) {
+  .menu {
+    left: 90%;
+    top: 1%;
+  }
+}
+@media all and (min-width: 1380px) and (max-width: 1950px) {
+  .menu {
+    left: 98%;
+    top: 1.5rem;
+  }
+}
+
+/*# sourceMappingURL=menu.css.map */
