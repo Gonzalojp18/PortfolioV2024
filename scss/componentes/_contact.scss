@@ -31,7 +31,7 @@
                 font-size: 1.6rem;
                 color: #cad6dd;
             }
-            button{
+            .btn{
                 background-color: #cad6dd;
                 padding: .8rem;
                 border-radius: 30px;
@@ -101,6 +101,7 @@
                 border-radius: 30px;
                 margin: 50% 0 0 0;
                 width: 80%;
+                border: 1px solid white;
                 a{
                     text-decoration: none;
                     color: #23153c;

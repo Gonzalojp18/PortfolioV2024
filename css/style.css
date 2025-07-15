@@ -756,18 +756,18 @@ body {
   font-size: 1.6rem;
   color: #cad6dd;
 }
-.boxContact .aboutContact .mail button {
+.boxContact .aboutContact .mail .btn {
   background-color: #cad6dd;
   padding: 0.8rem;
   border-radius: 30px;
   width: 50%;
 }
-.boxContact .aboutContact .mail button:hover {
+.boxContact .aboutContact .mail .btn:hover {
   box-shadow: #29154b 0px 0px 0px 10px;
   transition: 0.4s all ease-in-out;
   background-color: #dfc22c;
 }
-.boxContact .aboutContact .mail button a {
+.boxContact .aboutContact .mail .btn a {
   text-decoration: none;
   color: #23153c;
   font-size: 1.4rem;
@@ -827,6 +827,7 @@ body {
     border-radius: 30px;
     margin: 50% 0 0 0;
     width: 80%;
+    border: 1px solid white;
   }
   .boxContact .aboutContact .mail button a {
     text-decoration: none;
