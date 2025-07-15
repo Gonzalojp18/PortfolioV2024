@@ -44,7 +44,8 @@
             text-align: justify;
             line-height: 1.2;
             color: #ccc; // Color ligeramente más tenue para el cuerpo del texto
-            background-color: #23153c;
+            background-color: rgba(35, 21, 60, 0.8);
+            
 
             p {
                 opacity: 0; // Ocultamos para animar con GSAP

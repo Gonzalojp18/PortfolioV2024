@@ -352,7 +352,7 @@ body {
   text-align: justify;
   line-height: 1.2;
   color: #ccc;
-  background-color: #23153c;
+  background-color: rgba(35, 21, 60, 0.8);
 }
 .boxAboutMe .aboutMeContent .description p {
   opacity: 0;
