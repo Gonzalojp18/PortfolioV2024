@@ -22,14 +22,41 @@ projects.forEach(function(card) {
     });
 });
 
-// ININITY CARROUSEL ANIMATION ON SECTION SKILL
-const cinta = document.querySelector(".tegnology");
+document.addEventListener('DOMContentLoaded', () => {
+    const cinta = document.querySelector(".tegnology");
 
-// Define la animación continua
-gsap.to(cinta, {
-  xPercent: -100,
-  repeat: -1,
-  duration: 10,
-  ease: "linear"
+    // Clona el contenido de .tegnology para un bucle verdaderamente infinito
+    // Esto ya lo hicimos en el HTML, pero si por alguna razón no quieres modificar el HTML,
+    // podrías hacerlo aquí dinámicamente:
+    const originalContent = cinta.innerHTML;
+    cinta.innerHTML += originalContent;
+
+
+    // Calculamos el ancho total de una copia del carrusel para un bucle perfecto
+    // Necesitamos asegurarnos de que el ancho total del primer set de elementos
+    // sea lo que animamos para que el segundo set aparezca justo cuando el primero se va.
+    // Una forma común es animar `xPercent: -50` ya que hemos duplicado el contenido.
+    // Esto moverá el 50% del ancho del contenedor, que es exactamente el tamaño de la primera copia.
+
+    const duration = 25; // Duración de la animación en segundos, ajusta para cambiar la velocidad
+
+    gsap.to(cinta, {
+        xPercent: -50, // Mueve el 50% del ancho del elemento (que es la longitud de un set duplicado)
+        repeat: -1, // Repetición infinita
+        duration: duration,
+        ease: "linear", // Movimiento lineal para evitar saltos
+        modifiers: {
+            xPercent: gsap.utils.wrap(-50, 0) // Envuelve la animación de xPercent entre -50 y 0
+        }
+    });
+
+    // Opcional: Pausar la animación al pasar el mouse por encima
+    // cinta.addEventListener('mouseenter', () => {
+    //     gsap.to(cinta, { timeScale: 0.2, ease: "power1.out" }); // Ralentiza la animación
+    // });
+
+    // cinta.addEventListener('mouseleave', () => {
+    //     gsap.to(cinta, { timeScale: 1, ease: "power1.out" }); // Vuelve a la velocidad normal
+    // });
 });
 

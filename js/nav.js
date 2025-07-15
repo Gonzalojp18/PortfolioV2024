@@ -5,10 +5,16 @@ console.log(navLinks)
 
 const isOpen = () => {
     nav.classList.toggle('active');
+    if (nav.classList.contains('active')) {
+        document.body.classList.add('no-scroll');
+    } else {
+        document.body.classList.remove('no-scroll');
+    }
 }
 
 const closeNav = () => {
     nav.classList.remove('active');
+    document.body.classList.remove('no-scroll');
 }
 
 // event on each element in menu

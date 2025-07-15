@@ -583,7 +583,7 @@ body {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-around;
-  padding: 1.5rem 0 0 0;
+  padding: 1rem 0 0 0;
 }
 .boxSkill .aboutSkill h3 {
   font-size: 4rem;
@@ -604,62 +604,101 @@ body {
   -webkit-text-stroke: 2px #23153c;
   color: transparent;
 }
+.boxSkill .tegnology-wrapper {
+  position: relative;
+  width: 80%;
+  margin: 5% auto 0 auto;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 0, 0) 10%, rgb(0, 0, 0) 90%, rgba(0, 0, 0, 0));
+  -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 0, 0) 10%, rgb(0, 0, 0) 90%, rgba(0, 0, 0, 0));
+}
 .boxSkill .tegnology {
   display: flex;
-  height: 40%;
-  margin: 5% 0 0 0;
+  white-space: nowrap;
+  min-width: fit-content;
 }
 .boxSkill .tegnology .skill {
-  margin: 0 10rem 0 10rem;
+  margin: 0 2rem;
   text-align: center;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  min-width: 120px;
+  height: 100%;
 }
 .boxSkill .tegnology .skill h5 {
   font-weight: bold;
+  color: #23153c;
+  font-family: Montserrat, sans-serif;
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+}
+.boxSkill .tegnology .skill span {
+  display: block;
+}
+.boxSkill .tegnology .skill .iconify,
+.boxSkill .tegnology .skill .fa-brands,
+.boxSkill .tegnology .skill .fa-solid {
+  color: #23153c !important;
 }
 @media only screen and (min-width: 320px) and (max-width: 760px) {
   .boxSkill {
-    justify-content: space-between;
-    overflow: hidden;
+    height: 50vh;
   }
   .boxSkill .aboutSkill {
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-start;
+    align-items: center;
+    padding: 1rem 0;
   }
   .boxSkill .aboutSkill h3 {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    width: 90%;
+    text-align: center;
+    padding: 0;
   }
   .boxSkill .aboutSkill h2 {
     display: none;
   }
+  .boxSkill .tegnology-wrapper {
+    margin-top: 2rem;
+    height: 50%;
+    width: 95%;
+  }
   .boxSkill .tegnology .skill {
-    margin: 0 10rem 0 5px;
+    margin: 0 2rem;
+    min-width: 100px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1020px) {
   .boxSkill {
-    justify-content: space-between;
-    overflow: hidden;
+    height: 55vh;
   }
   .boxSkill .aboutSkill h3 {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
-  .boxSkill .tegnology {
-    width: 100%;
-    white-space: nowrap;
+  .boxSkill .aboutSkill h2 {
+    font-size: 3rem;
+  }
+  .boxSkill .tegnology-wrapper {
+    width: 90%;
+    margin-top: 3%;
   }
   .boxSkill .tegnology .skill {
-    margin: 0 10rem 0 5px;
+    margin: 0 4rem;
   }
 }
 @media only screen and (min-width: 1380px) and (max-width: 1950px) {
   .boxSkill {
-    overflow: hidden;
     height: 45vh;
   }
   .boxSkill .aboutSkill {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
     padding: 0 0 0 5rem;
   }
   .boxSkill .aboutSkill h3 {
@@ -668,17 +707,12 @@ body {
   .boxSkill .aboutSkill h2 {
     font-size: 4.5rem;
   }
-  .boxSkill .tegnology {
-    display: flex;
-    height: 40%;
-    margin: 5% 0 0 0;
+  .boxSkill .tegnology-wrapper {
+    margin-top: 4%;
+    width: 85%;
   }
   .boxSkill .tegnology .skill {
-    margin: 0 10rem 0 10rem;
-    text-align: center;
-  }
-  .boxSkill .tegnology .skill h5 {
-    font-weight: bold;
+    margin: 0 7rem;
   }
 }
 
