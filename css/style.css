@@ -84,7 +84,7 @@ body {
 
 .header {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
 }
 .header .boxName {
   display: flex;
@@ -162,7 +162,7 @@ body {
   }
   .header .boxName .name {
     width: 100%;
-    padding: 60% 0 0 10%;
+    padding: 50% 0 0 10%;
   }
   .header .boxName .name p {
     font-size: 1.5rem;
@@ -201,7 +201,7 @@ body {
     font-size: 0.8rem;
     font-weight: 700;
     padding: 0.5rem;
-    width: 73%;
+    width: 75%;
     letter-spacing: 1.4px;
     margin: 0.5rem 0 0 0;
   }
@@ -821,14 +821,14 @@ body {
   .boxContact .aboutContact .mail p {
     font-size: 1.5rem;
   }
-  .boxContact .aboutContact .mail button {
+  .boxContact .aboutContact .mail .btn {
     padding: 0.8rem;
     border-radius: 30px;
-    margin: 50% 0 0 0;
+    margin: 20% 0 0 0;
     width: 80%;
     border: 1px solid white;
   }
-  .boxContact .aboutContact .mail button a {
+  .boxContact .aboutContact .mail .btn a {
     text-decoration: none;
     color: #23153c;
     font-size: 1.5rem;
